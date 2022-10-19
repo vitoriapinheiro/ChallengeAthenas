@@ -13,6 +13,10 @@
 		44C365C628F98B30007B9868 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C365C528F98B30007B9868 /* Preview Assets.xcassets */; };
 		44C365CD28F991DE007B9868 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365CC28F991DE007B9868 /* MenuView.swift */; };
 		44C365D128F99A55007B9868 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D028F99A55007B9868 /* AppButton.swift */; };
+		44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D328FA41EF007B9868 /* SettingsView.swift */; };
+		44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D528FA45A4007B9868 /* AppNavigationButton.swift */; };
+		44C365D828FA4907007B9868 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D728FA4907007B9868 /* CreditsView.swift */; };
+		44C365DA28FA4950007B9868 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D928FA4950007B9868 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		44C365C528F98B30007B9868 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44C365CC28F991DE007B9868 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		44C365D028F99A55007B9868 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		44C365D328FA41EF007B9868 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		44C365D528FA45A4007B9868 /* AppNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationButton.swift; sourceTree = "<group>"; };
+		44C365D728FA4907007B9868 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		44C365D928FA4950007B9868 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,6 @@
 				44C365D228F99A61007B9868 /* Components */,
 				44C365CF28F99A30007B9868 /* Views */,
 				44C365BE28F98B2E007B9868 /* ChallengeAthenasApp.swift */,
-				44C365C028F98B2E007B9868 /* ContentView.swift */,
 				44C365C228F98B30007B9868 /* Assets.xcassets */,
 				44C365C428F98B30007B9868 /* Preview Content */,
 			);
@@ -76,7 +83,11 @@
 		44C365CF28F99A30007B9868 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44C365C028F98B2E007B9868 /* ContentView.swift */,
 				44C365CC28F991DE007B9868 /* MenuView.swift */,
+				44C365D928FA4950007B9868 /* MapView.swift */,
+				44C365D328FA41EF007B9868 /* SettingsView.swift */,
+				44C365D728FA4907007B9868 /* CreditsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				44C365D028F99A55007B9868 /* AppButton.swift */,
+				44C365D528FA45A4007B9868 /* AppNavigationButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -160,9 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C365CD28F991DE007B9868 /* MenuView.swift in Sources */,
+				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
+				44C365D828FA4907007B9868 /* CreditsView.swift in Sources */,
 				44C365C128F98B2E007B9868 /* ContentView.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
+				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
 				44C365D128F99A55007B9868 /* AppButton.swift in Sources */,
+				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +310,12 @@
 				DEVELOPMENT_TEAM = PST723S8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hellcife;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +340,12 @@
 				DEVELOPMENT_TEAM = PST723S8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hellcife;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

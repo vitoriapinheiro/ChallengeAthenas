@@ -25,25 +25,27 @@ struct MenuView: View {
                 .aspectRatio(contentMode: .fill)
             VStack {
                 Spacer()
-                AppButton(
-                    title: "Continuar",
-                    action: {print("Você clicou em continuar")},
-                    enable: false,
+                AppNavigationButton(
+                    title: "Continuar história",
+                    nextView: {AnyView(SettingsView())},
                     isFill: true
                 )
-                AppButton(
-                    title: "Novo Jogo",
-                    action: {print("Você clicou em Novo Jogo")},
-                    enable: true,
+                AppNavigationButton(
+                    title: "Ir para o Mapa",
+                    nextView: {AnyView(MapView())},
                     isFill: true
                 )
-                AppButton(
+                AppNavigationButton(
+                    title: "Configurações",
+                    nextView: {AnyView(SettingsView())},
+                    isFill: true
+                )
+                AppNavigationButton(
                     title: "Créditos",
-                    action: {print("Você clicou em Créditos")},
-                    enable: true,
+                    nextView: {AnyView(CreditsView())},
                     isFill: false
                 )
-                .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
             }
             
         }

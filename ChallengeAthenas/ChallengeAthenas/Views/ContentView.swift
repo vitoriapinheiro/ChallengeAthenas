@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("level") var level: Int = 2
+    @AppStorage("level") var level: Int = 0
     
     var body: some View {
-        MenuView(level: $level)
+        NavigationView{
+            MenuView(level: $level)
+        }
     }
 }
 

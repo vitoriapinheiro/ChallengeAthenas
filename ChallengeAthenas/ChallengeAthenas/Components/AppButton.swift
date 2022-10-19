@@ -23,10 +23,10 @@ struct AppButton: View {
             Text(title)
                 .bold()
                 .foregroundColor(isFill ? Color.white : Color.pink)
-                .frame(width: 300, height: 52)
+                .frame(width: 300, height: 48)
                 .background(isFill ? (enable ? Color.pink: Color.gray) : Color.white.opacity(0))
-                .cornerRadius(8)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+                .cornerRadius(16)
+                .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
         }
         )
     }
