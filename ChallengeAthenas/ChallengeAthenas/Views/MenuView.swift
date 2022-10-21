@@ -27,7 +27,7 @@ struct MenuView: View {
                 Spacer()
                 AppNavigationButton(
                     title: "Continuar história",
-                    nextView: {AnyView(SettingsView())},
+                    nextView: {AnyView(DialogueView())},
                     isFill: true
                 )
                 AppNavigationButton(
