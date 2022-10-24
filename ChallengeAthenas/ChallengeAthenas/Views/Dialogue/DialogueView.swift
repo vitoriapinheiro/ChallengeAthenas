@@ -7,32 +7,47 @@
 
 import SwiftUI
 
+class ActualLevel: ObservableObject {
+    @Published var level = 0
+}
+
+class DialoguePosition: ObservableObject {
+    @Published var position = 0
+}
+
+
+
 struct DialogueView: View {
     @State var pauseIsActive = false
+    let levelArray = LevelArray()
+    @StateObject var levelNumber = ActualLevel()
+    @StateObject var dialoguePosition = DialoguePosition()
     
     var body: some View {
+        let actualLevel = levelArray.levels[levelNumber.level]
+        
         ZStack {
             //Background
-            Image("manguebg")
+            actualLevel.background
                 .resizable()
                 .ignoresSafeArea()
             
             //Personagem
-            VStack {
-                Spacer()
-                Image("bonecaTeste")
-                    .offset(x:100, y: 50)
-                    .frame(alignment: .bottomTrailing)
-            }.ignoresSafeArea()
-            
+            if dialoguePosition.position > 4 {
+                VStack {
+                    Spacer()
+                    actualLevel.bossImage
+                        .offset(x:50, y: 50)
+                }.ignoresSafeArea()
+            }
             //Caixas de texto e botões de fala
-            ConversationAndButtonsView()
+            ConversationAndButtonsView(observedDialogue: dialoguePosition, observedLevel: levelNumber)
             
             //Pause
             PauseButtonView(sheetIsActive: $pauseIsActive)
             
             //PopUp
-            if pauseIsActive == true {
+            if pauseIsActive {
                 PauseMenuSheet(sheetIsActive: $pauseIsActive)
             }
             

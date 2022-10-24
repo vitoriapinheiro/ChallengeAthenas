@@ -17,6 +17,9 @@
 		44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D528FA45A4007B9868 /* AppNavigationButton.swift */; };
 		44C365D828FA4907007B9868 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D728FA4907007B9868 /* CreditsView.swift */; };
 		44C365DA28FA4950007B9868 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D928FA4950007B9868 /* MapView.swift */; };
+		CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE429070A9700E3AEC3 /* Level.swift */; };
+		CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */; };
+		CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */; };
 		CAF72E79290235370091513A /* PauseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E75290235370091513A /* PauseButtonView.swift */; };
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
@@ -35,6 +38,9 @@
 		44C365D528FA45A4007B9868 /* AppNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationButton.swift; sourceTree = "<group>"; };
 		44C365D728FA4907007B9868 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		44C365D928FA4950007B9868 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CA4EDDE429070A9700E3AEC3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelArray.swift; sourceTree = "<group>"; };
+		CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDialogueButton.swift; sourceTree = "<group>"; };
 		CAF72E75290235370091513A /* PauseButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButtonView.swift; sourceTree = "<group>"; };
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
@@ -116,7 +122,10 @@
 				CAF72E75290235370091513A /* PauseButtonView.swift */,
 				CAF72E76290235370091513A /* DialogueView.swift */,
 				CAF72E77290235370091513A /* PauseMenuSheet.swift */,
+				CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */,
 				CAF72E78290235370091513A /* ConversationAndButtonsView.swift */,
+				CA4EDDE429070A9700E3AEC3 /* Level.swift */,
+				CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */,
 			);
 			path = Dialogue;
 			sourceTree = "<group>";
@@ -193,12 +202,15 @@
 			files = (
 				44C365CD28F991DE007B9868 /* MenuView.swift in Sources */,
 				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
+				CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */,
 				44C365D828FA4907007B9868 /* CreditsView.swift in Sources */,
 				44C365C128F98B2E007B9868 /* ContentView.swift in Sources */,
+				CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */,
 				CAF72E79290235370091513A /* PauseButtonView.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
 				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
 				44C365D128F99A55007B9868 /* AppButton.swift in Sources */,
+				CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,

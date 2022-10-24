@@ -9,8 +9,28 @@ import SwiftUI
 
 
 struct ConversationAndButtonsView: View {
+    let levelArray = LevelArray()
+    @ObservedObject var dialoguePosition: DialoguePosition
+    @ObservedObject var levelNumber: ActualLevel
+    var speaker: String = ""
+    
+    init(observedDialogue: DialoguePosition, observedLevel: ActualLevel){
+        self.dialoguePosition = observedDialogue
+        self.levelNumber = observedLevel
+        self.speakerChanger()
+    }
+    
+        private mutating func speakerChanger(){
+            if levelArray.levels[levelNumber.level].speakerArray[dialoguePosition.position] {
+                speaker = "Eu"
+            }else {
+                speaker = levelArray.levels[levelNumber.level].bossName
+            }
+        }
     
     var body: some View {
+        let actualLevel = levelArray.levels[levelNumber.level]
+        
         VStack (spacing: 0) {
             Spacer()
             
@@ -20,8 +40,8 @@ struct ConversationAndButtonsView: View {
                     .frame(width:16)
                 
                 ZStack {
-                    Color.green
-                    Text("Mofia")
+                    actualLevel.dialogueColor
+                    Text(speaker)
                         .foregroundColor(.white)
                     
                 }.frame(width: 85, height: 44)
@@ -32,25 +52,40 @@ struct ConversationAndButtonsView: View {
             
             //Caixa de fala
             HStack {
-                Spacer()
-                    .frame(width: 16)
+                Spacer().frame(width: 16)
                 
                 //Fala
                 ZStack {
-                    Color.green
+                    actualLevel.dialogueColor
                     
-                    HStack {
-                        Spacer().frame(width: 16)
+                    VStack {
+                        Spacer().frame(height: 16)
                         
-                        Text ("Lorem ipsum dolor sit amet, ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua amet.")
-                            .foregroundColor(.white)
+                        HStack {
+                            Spacer().frame(width: 16)
+                            
+                            Text (actualLevel.dialogueArray[dialoguePosition.position])
+                                .foregroundColor(.white)
+                            
+                            Spacer().frame(width: 16)
+                        }
                         
+                        Spacer()
+                    }
+                    
+                    //Next button
+                    HStack{
+                        Spacer()
+                        VStack{
+                            Spacer()
+                            NextDialogueButton(dialoguePosition: dialoguePosition)
+                            Spacer().frame(height: 16)
+                        }
                         Spacer().frame(width: 16)
-                    }.frame(alignment: .topLeading)
+                    }
                 }.frame(height: 136)
                 
-                Spacer()
-                    .frame(width: 16)
+                Spacer().frame(width: 16)
             }
             
             Spacer().frame(height: 24)
