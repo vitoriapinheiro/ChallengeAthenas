@@ -15,6 +15,7 @@ struct CreditsView: View {
     
     var backgroundGradient: LinearGradient?
     
+    
     init() {
         self.backgroundGradient = LinearGradient(
             colors: [self.bottomGradient, self.topGradient],
@@ -65,6 +66,7 @@ struct CreditsView: View {
         }
     }
 }
+
 
 struct CreditsView_Previews: PreviewProvider {
     static var previews: some View {
