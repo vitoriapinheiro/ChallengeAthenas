@@ -61,20 +61,28 @@ struct DialogueView: View {
                 }
             }
             
+            if dialoguePosition.position >= 19 && levelNumber.level == 0 {
+                Color(.black).ignoresSafeArea()
+            }
+            
             //Caixas de texto e botões de fala
             ConversationAndButtonsView(observedDialogue: dialoguePosition, observedLevel: levelNumber)
             
             //Título
             if dialoguePosition.position < 2 {
-                HStack{
-                    VStack{
-                        //Spacer().frame(height: 62)
-                        ZStack{
+                VStack{
+                    ZStack{
+                        HStack{
                             Image("tituloLevel")
+                            Spacer()
+                        }
+                        
+                        HStack{
+                            Spacer().frame(width: 16)
                             Text(actualLevel.title)
                                 .foregroundColor(.white)
+                            Spacer()
                         }
-                        Spacer()
                     }
                     Spacer()
                 }
@@ -98,6 +106,5 @@ struct DialogueView: View {
 struct DialogueView_Previews: PreviewProvider {
     static var previews: some View {
         DialogueView()
-            .previewDevice("iPhone 12")
     }
 }

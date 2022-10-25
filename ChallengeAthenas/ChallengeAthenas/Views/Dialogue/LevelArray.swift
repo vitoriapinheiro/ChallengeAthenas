@@ -28,10 +28,21 @@ struct LevelArray {
         "Meu papel é te guiar. Temos inimigos poderosos que você já já vai conhecer… Mas agora… venha treinar comigo!",
         "Vish maria… Onde eu me meti?",
         // Briga com Morfia. Algum banner aparece
-        "Aqui em Recife, brigamos com passinho. Vou te ensinar a dançar, você tem cara de que tem um gingado escondido aí!"
+        "Aqui em Recife, brigamos com passinho. Vou te ensinar a dançar, você tem cara de que tem um gingado escondido aí!",
         // Mostra a tela do jogo
+        //Cabou a briga
+        "Pronto, agora tá no grau! Você sabe meter o passinho. Vamo simbora resgatar a jjnfakjdn de Brennand!",
+        "É aqui que ficava a csnkcdnv, né?",
+        "Sim… agora temos essa longa escada que ninguém se atreve a adentrar. É um portal para o reino dos nossos inimigos, os ladrões… para Hellcife!",
+        "Meu Jesus, não achei que fosse tão sério…",
+        "Mas É, herói… E agora, o destino de Recife está em suas mãos…",
+        //Morfia empurra
+        //Tela escura
+        "dnfnfkwnn!IKN2nkn4342",
+        "…",
+        "… onde estou?"
         ]
-        ,speakerArray: [true,true,true,true,false,false,true,false,true,false,true,false,true,false]
+        ,speakerArray: [true,true,true,true,false,false,true,false,true,false,true,false,true,false,false,true,false,true,false,true,true,true]
         ,dialogueColor: Color(red: 0.00, green: 0.60, blue: 0.40))
 
 var level2: Level = Level(title: "2º Círculo: Boa Viagem", bossName: "Cebruthius", bossImage: Image("Cebruthius"), background: Image("Praia"),
