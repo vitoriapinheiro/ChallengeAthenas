@@ -1,6 +1,6 @@
 # ***Projeto Game: HellCife***
  
-![Banner Dono da Lua](https://i.imgur.com/NXIbceV.png)
+![Banner Dono da Lua](https://imgur.com/a/1Lm97ki)
 
 <p align="center">
     <img src="https://img.shields.io/github/issues-pr-raw/vitoriapinheiro/ChallengeAthenas">
@@ -23,7 +23,7 @@
 - Thaís Monteiro
 
 ## Sinopse
- Existe uma Recife que você não conhece... nos subterrâneos da Veneza brasileira, há Hellcife, uma Recife contaminada e diabólica, cujos habitantes amam trazer problemas para Recife. Agora, o pesadelo começa: a pica de Brennand foi roubada por esses Hellcifenses malignos! Você é o herói prometido para salvá-la, derrotando todos os inimigos através do PASSINHO! Dale, boy, tás pronto?
+Existe uma Recife que você não conhece... nos subterrâneos da Veneza brasileira, há Hellcife, uma Recife contaminada e diabólica, cujos habitantes amam trazer problemas para a superfície. Agora, o pesadelo ficou pior: o obelisco de Brennand foi roubado por esses Hellcifenses malignos! Você é o herói prometido para salvá-la, passando por todos os círculos hellcifenses através do PASSINHO! Dale, boy, tás pronto?
  
 </br>
 
