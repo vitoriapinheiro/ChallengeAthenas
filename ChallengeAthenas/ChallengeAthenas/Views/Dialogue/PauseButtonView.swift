@@ -15,7 +15,7 @@ struct PauseButtonView: View {
             HStack{
                 Spacer()
                 ZStack{
-                    Color.orange
+                    Color(red: 0.90, green: 0.39, blue: 0.00)
                         .frame(width: 48, height: 48, alignment: .topTrailing)
                         .cornerRadius(30)
                         .onTapGesture {

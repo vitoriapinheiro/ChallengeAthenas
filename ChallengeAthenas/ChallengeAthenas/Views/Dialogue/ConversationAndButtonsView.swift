@@ -68,6 +68,7 @@ struct ConversationAndButtonsView: View {
                                 .foregroundColor(.white)
                             
                             Spacer().frame(width: 16)
+                            Spacer()
                         }
                         
                         Spacer()
@@ -78,7 +79,7 @@ struct ConversationAndButtonsView: View {
                         Spacer()
                         VStack{
                             Spacer()
-                            NextDialogueButton(dialoguePosition: dialoguePosition)
+                            NextDialogueButton(dialoguePosition: dialoguePosition, actualLevel: levelNumber)
                             Spacer().frame(height: 16)
                         }
                         Spacer().frame(width: 16)

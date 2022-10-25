@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 struct LevelArray {
-    let levels: [Level] = [level1]
+    let levels: [Level] = [level1, level2, level3]
 }
-    var level1: Level = Level(title: "Marco Zero", bossName: "Mofia", bossImage: Image("Morfia"), background: Image("marcoZeroBg"),
+    var level1: Level = Level(title: "1º Círculo: Marco Zero", bossName: "Mofia", bossImage: Image("Morfia"), background: Image("Marco"),
         dialogueArray:
         [
         "Finalmente tô conhecendo as atrações de Recife! Que lugar lindo…",
@@ -34,3 +34,24 @@ struct LevelArray {
         ,speakerArray: [true,true,true,true,false,false,true,false,true,false,true,false,true,false]
         ,dialogueColor: Color(red: 0.00, green: 0.60, blue: 0.40))
 
+var level2: Level = Level(title: "2º Círculo: Boa Viagem", bossName: "Cebruthius", bossImage: Image("Cebruthius"), background: Image("Praia"),
+        dialogueArray:
+        ["Meu Deus… parece a praia de Boa Viagem, mas...",
+         "Cebruuuuuuuuuuuuthius! Quem ousa invadir meu círculo de Hellcife?", // Aparece Cebruthius
+         "!!!!",
+         "Espero que tu saiba meter o passinho!",
+         //Briga
+         "Que loucura. Mas parece que eu levo jeito…"
+        ]
+        ,speakerArray: [true,false,true,false,true]
+        ,dialogueColor: Color(red: 0.00, green: 0.53, blue: 0.60))
+
+var level3: Level = Level(title: "3º Círculo: Via Mangue", bossName: "Mangue Boy", bossImage: Image("MangueBoy"), background: Image("Mangue"),
+        dialogueArray:
+        ["Qué isso boy? Veio trazer caos pra minha lama?",
+         "Ha! Vamo ver quem é que tira a maior braba…",
+         //Briga
+         "Esqueça tudo!"
+        ]
+        ,speakerArray: [false,true,true]
+        ,dialogueColor: Color(red: 0.00, green: 0.50, blue: 0.34))
