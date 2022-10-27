@@ -19,7 +19,7 @@ struct MenuView: View {
         "hell"
     ]
     
-    var body: some View {        
+    var body: some View {
         
         ZStack{
             
@@ -39,42 +39,43 @@ struct MenuView: View {
                         .font(.custom("xilosa", size: 32))
                         .foregroundColor(.white)
                 }
-                    
+                
                 Spacer()
                 
-                AppInitialButton(
-                    title: "CONTINUAR",
-                    nextView: {AnyView(DialogueView())},
-                    isSecondary: false
-                )
-                
-              
-                HStack(spacing: 16){
+                VStack(spacing: 16){
                     
                     AppInitialButton(
-                        title: "NOVO JOGO",
+                        title: "CONTINUAR",
                         nextView: {AnyView(DialogueView())},
-                        isSecondary: true
+                        isSecondary: false
                     )
                     
-                    AppInitialButton(
-                        title: "MODO DUELO",
-                        nextView: {AnyView(MapView())},
-                        isSecondary: true
+                    HStack(spacing: 16){
+                        
+                        AppInitialButton(
+                            title: "NOVO JOGO",
+                            nextView: {AnyView(DialogueView())},
+                            isSecondary: true
+                        )
+                        
+                        AppInitialButton(
+                            title: "MODO DUELO",
+                            nextView: {AnyView(MapView())},
+                            isSecondary: true
+                        )
+                        
+                    } .padding(.horizontal, 15)
+                    
+                    
+                    CreditsButton(
+                        nextView: {AnyView(CreditsView())}
                     )
                     
-
+                    .padding(.bottom, 100)
+                    
                 }
-                .padding(.horizontal, 15)
-                //.background(.yellow)
-               
-                AppNavigationButton(
-                    title: "Créditos",
-                    nextView: {AnyView(CreditsView())},
-                    isFill: false
-                )
-                .padding(.bottom, 80)
             }
+          
             
         }
     }
