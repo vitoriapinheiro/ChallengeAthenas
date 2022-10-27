@@ -9,8 +9,28 @@ import SwiftUI
 
 
 struct ConversationAndButtonsView: View {
+    let levelArray = LevelArray()
+    @ObservedObject var dialoguePosition: DialoguePosition
+    @ObservedObject var levelNumber: ActualLevel
+    var speaker: String = ""
+    
+    init(observedDialogue: DialoguePosition, observedLevel: ActualLevel){
+        self.dialoguePosition = observedDialogue
+        self.levelNumber = observedLevel
+        self.speakerChanger()
+    }
+    
+        private mutating func speakerChanger(){
+            if levelArray.levels[levelNumber.level].speakerArray[dialoguePosition.position] {
+                speaker = "Eu"
+            }else {
+                speaker = levelArray.levels[levelNumber.level].bossName
+            }
+        }
     
     var body: some View {
+        let actualLevel = levelArray.levels[levelNumber.level]
+        
         VStack (spacing: 0) {
             Spacer()
             
@@ -20,11 +40,12 @@ struct ConversationAndButtonsView: View {
                     .frame(width:16)
                 
                 ZStack {
-                    Color.green
-                    Text("Mofia")
+                    actualLevel.dialogueColor
+                    Text(speaker)
                         .foregroundColor(.white)
+                        .offset(y: -2)
                     
-                }.frame(width: 85, height: 44)
+                }.frame(width: CGFloat(levelArray.levels[levelNumber.level].bossName.count * 15), height: 44)
                     .offset(y:14)
                 
                 Spacer()
@@ -32,25 +53,41 @@ struct ConversationAndButtonsView: View {
             
             //Caixa de fala
             HStack {
-                Spacer()
-                    .frame(width: 16)
+                Spacer().frame(width: 16)
                 
                 //Fala
                 ZStack {
-                    Color.green
+                    actualLevel.dialogueColor
                     
-                    HStack {
-                        Spacer().frame(width: 16)
+                    VStack {
+                        Spacer().frame(height: 16)
                         
-                        Text ("Lorem ipsum dolor sit amet, ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua amet.")
-                            .foregroundColor(.white)
+                        HStack {
+                            Spacer().frame(width: 16)
+                            
+                            Text (actualLevel.dialogueArray[dialoguePosition.position])
+                                .foregroundColor(.white)
+                            
+                            Spacer().frame(width: 16)
+                            Spacer()
+                        }
                         
+                        Spacer()
+                    }
+                    
+                    //Next button
+                    HStack{
+                        Spacer()
+                        VStack{
+                            Spacer()
+                            NextDialogueButton(dialoguePosition: dialoguePosition, actualLevel: levelNumber)
+                            Spacer().frame(height: 16)
+                        }
                         Spacer().frame(width: 16)
-                    }.frame(alignment: .topLeading)
+                    }
                 }.frame(height: 136)
                 
-                Spacer()
-                    .frame(width: 16)
+                Spacer().frame(width: 16)
             }
             
             Spacer().frame(height: 24)
@@ -59,17 +96,42 @@ struct ConversationAndButtonsView: View {
             HStack {
                 Spacer()
                     .frame(width: 16)
-                
-                Color.red.frame(width: 102, height: 34)
+                ZStack{
+                    Image("botao")
+                        .resizable()
+                        .frame(width: 102, height: 34)
+                    Text("pular tudo")
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            dialoguePosition.position = LevelArray().levels[levelNumber.level].dialogueArray.count - 1
+                        }
+                }
                 
                 Spacer()
                 
                 HStack(spacing: 16) {
-                    Color.red
-                        .frame(width: 84)
+                    //Voltar
+                    ZStack{
+                        Image("botao")
+                            .resizable()
+                            .frame(width: 84)
+                            .onTapGesture {
+                                if dialoguePosition.position > 0 {
+                                    dialoguePosition.position -= 1
+                                }
+                            }
+                        Text("voltar")
+                            .foregroundColor(.white)
+                    }
                     
-                    Color.red
-                        .frame(width: 84)
+                    ZStack{
+                        Image("botao")
+                            .resizable()
+                            .frame(width: 84)
+                        
+                        Text("auto")
+                            .foregroundColor(.white)
+                    }
                     
                 }.frame(height: 34)
                 
