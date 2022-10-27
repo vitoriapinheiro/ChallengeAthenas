@@ -23,6 +23,11 @@ struct MenuView: View {
         
         ZStack{
             
+            Rectangle()
+                .ignoresSafeArea(.all)
+                .background(.black)
+            
+            
             Image(bkgImg[level])
                 .resizable()
                 .ignoresSafeArea(.all)
@@ -71,11 +76,11 @@ struct MenuView: View {
                         nextView: {AnyView(CreditsView())}
                     )
                     
-                    .padding(.bottom, 100)
+                    .padding(.bottom, 90)
                     
                 }
             }
-          
+            
             
         }
     }
