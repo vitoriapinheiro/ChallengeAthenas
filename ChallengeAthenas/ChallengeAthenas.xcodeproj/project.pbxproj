@@ -99,7 +99,7 @@
 			children = (
 				CAF72E74290235370091513A /* Dialogue */,
 				44C365C028F98B2E007B9868 /* ContentView.swift */,
-				44C365CC28F991DE007B9868 /* MenuView.swift */,
+				E99A2E08290AFF7F00175BF8 /* Menu */,
 				44C365D928FA4950007B9868 /* MapView.swift */,
 				44C365D328FA41EF007B9868 /* SettingsView.swift */,
 				44C365D728FA4907007B9868 /* CreditsView.swift */,
@@ -128,6 +128,14 @@
 				CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */,
 			);
 			path = Dialogue;
+			sourceTree = "<group>";
+		};
+		E99A2E08290AFF7F00175BF8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				44C365CC28F991DE007B9868 /* MenuView.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -31,7 +31,11 @@ struct MenuView: View {
             
             VStack {
                 
+                    Image("gameTitle")
+                        .padding(.vertical, 50)
+                    
                 Spacer()
+                
                 AppNavigationButton(
                     title: "Continuar história",
                     nextView: {AnyView(DialogueView())},
@@ -43,17 +47,13 @@ struct MenuView: View {
                     nextView: {AnyView(MapView())},
                     isFill: true
                 )
-                AppNavigationButton(
-                    title: "Configurações",
-                    nextView: {AnyView(SettingsView())},
-                    isFill: true
-                )
+               
                 AppNavigationButton(
                     title: "Créditos",
                     nextView: {AnyView(CreditsView())},
                     isFill: false
                 )
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+                .padding(.bottom, 80)
             }
             
         }
