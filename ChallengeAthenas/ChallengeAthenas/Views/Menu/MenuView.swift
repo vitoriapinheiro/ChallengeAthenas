@@ -2,34 +2,42 @@
 //  MenuView.swift
 //  ChallengeAthenas
 //
-//  Created by vivi on 14/10/22.
+//  Created by thaxz on 27/10/22.
 //
 
 import Foundation
 import SwiftUI
 
 struct MenuView: View {
+    
     @Binding var level: Int
+    
     let credits: Bool = false
+    
     let bkgImg: [String] = [
-        "marco-zero",
-        "hell",
-        "beach"
+        "marcoMenu",
+        "hell"
     ]
     
     var body: some View {
+        
+        
         ZStack{
+            
             Image(bkgImg[level])
                 .resizable()
                 .ignoresSafeArea(.all)
                 .aspectRatio(contentMode: .fill)
+            
             VStack {
+                
                 Spacer()
                 AppNavigationButton(
                     title: "Continuar história",
                     nextView: {AnyView(DialogueView())},
                     isFill: true
                 )
+                
                 AppNavigationButton(
                     title: "Ir para o Mapa",
                     nextView: {AnyView(MapView())},
@@ -49,6 +57,12 @@ struct MenuView: View {
             }
             
         }
+    }
+}
+
+struct MenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
