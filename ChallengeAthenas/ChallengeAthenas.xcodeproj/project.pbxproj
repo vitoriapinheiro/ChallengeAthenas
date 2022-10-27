@@ -19,10 +19,16 @@
 		44C365DA28FA4950007B9868 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D928FA4950007B9868 /* MapView.swift */; };
 		A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAE9290B1521004BCAFB /* Team.swift */; };
 		A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */; };
+		CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE429070A9700E3AEC3 /* Level.swift */; };
+		CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */; };
+		CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */; };
 		CAF72E79290235370091513A /* PauseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E75290235370091513A /* PauseButtonView.swift */; };
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
+		D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* FutureSheet.swift */; };
+		D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31A29075FFB00243041 /* PopUpTitle.swift */; };
+		D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31C2907683100243041 /* NotYetSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +45,16 @@
 		44C365D928FA4950007B9868 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A3D0AAE9290B1521004BCAFB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamArray.swift; sourceTree = "<group>"; };
+		CA4EDDE429070A9700E3AEC3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelArray.swift; sourceTree = "<group>"; };
+		CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDialogueButton.swift; sourceTree = "<group>"; };
 		CAF72E75290235370091513A /* PauseButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButtonView.swift; sourceTree = "<group>"; };
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
+		D4EAE318290729CD00243041 /* FutureSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureSheet.swift; sourceTree = "<group>"; };
+		D4EAE31A29075FFB00243041 /* PopUpTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTitle.swift; sourceTree = "<group>"; };
+		D4EAE31C2907683100243041 /* NotYetSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotYetSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,9 @@
 				44C365D928FA4950007B9868 /* MapView.swift */,
 				44C365D328FA41EF007B9868 /* SettingsView.swift */,
 				A3D0AAE8290B10BE004BCAFB /* Credits */,
+				44C365D728FA4907007B9868 /* CreditsView.swift */,
+				D4EAE318290729CD00243041 /* FutureSheet.swift */,
+				D4EAE31C2907683100243041 /* NotYetSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +125,7 @@
 			children = (
 				44C365D028F99A55007B9868 /* AppButton.swift */,
 				44C365D528FA45A4007B9868 /* AppNavigationButton.swift */,
+				D4EAE31A29075FFB00243041 /* PopUpTitle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -130,7 +146,10 @@
 				CAF72E75290235370091513A /* PauseButtonView.swift */,
 				CAF72E76290235370091513A /* DialogueView.swift */,
 				CAF72E77290235370091513A /* PauseMenuSheet.swift */,
+				CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */,
 				CAF72E78290235370091513A /* ConversationAndButtonsView.swift */,
+				CA4EDDE429070A9700E3AEC3 /* Level.swift */,
+				CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */,
 			);
 			path = Dialogue;
 			sourceTree = "<group>";
@@ -208,13 +227,19 @@
 				44C365CD28F991DE007B9868 /* MenuView.swift in Sources */,
 				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
 				A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */,
+				CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */,
 				44C365D828FA4907007B9868 /* CreditsView.swift in Sources */,
+				D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */,
+				D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */,
 				44C365C128F98B2E007B9868 /* ContentView.swift in Sources */,
+				CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */,
 				CAF72E79290235370091513A /* PauseButtonView.swift in Sources */,
 				A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
+				D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */,
 				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
 				44C365D128F99A55007B9868 /* AppButton.swift in Sources */,
+				CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
