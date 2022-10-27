@@ -34,7 +34,9 @@ struct FutureSheet: View {
                     title: "OK, BOY",
                     action: {showPopUp = false},
                     enable: true,
-                    isFill: true
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
             }
             

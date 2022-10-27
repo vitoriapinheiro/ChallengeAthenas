@@ -21,7 +21,9 @@ struct SettingsView: View {
                     title: "Volume do jogo",
                     action: { alertView() },
                     enable: true,
-                    isFill: true
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
                 AppButton(
                     title: "Volume da música",
@@ -29,13 +31,17 @@ struct SettingsView: View {
                         showLoading.toggle()
                     }},
                     enable: true,
-                    isFill: true
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
                 AppButton(
                     title: "Vibrações",
                     action: {print("2")},
                     enable: true,
-                    isFill: true
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
             }
             if showLoading{
