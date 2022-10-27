@@ -45,6 +45,10 @@
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
+		E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cordel-rustika.otf"; sourceTree = "<group>"; };
+		E99A2E0B290B08D600175BF8 /* xilosa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xilosa.ttf; sourceTree = "<group>"; };
+		E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xilo-sans.ttf"; sourceTree = "<group>"; };
+		E99A2E0D290B096700175BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		44C365BD28F98B2E007B9868 /* ChallengeAthenas */ = {
 			isa = PBXGroup;
 			children = (
+				E99A2E0D290B096700175BF8 /* Info.plist */,
+				E99A2E09290B089200175BF8 /* Fonts */,
 				44C365D228F99A61007B9868 /* Components */,
-				44C365CF28F99A30007B9868 /* Views */,
 				44C365BE28F98B2E007B9868 /* ChallengeAthenasApp.swift */,
+				44C365CF28F99A30007B9868 /* Views */,
 				44C365C228F98B30007B9868 /* Assets.xcassets */,
 				44C365C428F98B30007B9868 /* Preview Content */,
 			);
@@ -136,6 +142,16 @@
 				44C365CC28F991DE007B9868 /* MenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		E99A2E09290B089200175BF8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */,
+				E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */,
+				E99A2E0B290B08D600175BF8 /* xilosa.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +370,7 @@
 				DEVELOPMENT_TEAM = PST723S8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChallengeAthenas/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Hellcife;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -384,6 +401,7 @@
 				DEVELOPMENT_TEAM = PST723S8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChallengeAthenas/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Hellcife;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
