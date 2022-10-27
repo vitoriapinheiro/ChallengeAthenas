@@ -19,8 +19,7 @@ struct MenuView: View {
         "hell"
     ]
     
-    var body: some View {
-        
+    var body: some View {        
         
         ZStack{
             
@@ -31,22 +30,43 @@ struct MenuView: View {
             
             VStack {
                 
+                VStack(spacing: -50) {
+                    
                     Image("gameTitle")
                         .padding(.vertical, 50)
                     
+                    Text("os Nove Circulos")
+                        .font(.custom("xilosa", size: 32))
+                        .foregroundColor(.white)
+                }
+                    
                 Spacer()
                 
-                AppNavigationButton(
-                    title: "Continuar história",
+                AppInitialButton(
+                    title: "CONTINUAR",
                     nextView: {AnyView(DialogueView())},
-                    isFill: true
+                    isSecondary: false
                 )
                 
-                AppNavigationButton(
-                    title: "Ir para o Mapa",
-                    nextView: {AnyView(MapView())},
-                    isFill: true
-                )
+              
+                HStack(spacing: 16){
+                    
+                    AppInitialButton(
+                        title: "NOVO JOGO",
+                        nextView: {AnyView(DialogueView())},
+                        isSecondary: true
+                    )
+                    
+                    AppInitialButton(
+                        title: "MODO DUELO",
+                        nextView: {AnyView(MapView())},
+                        isSecondary: true
+                    )
+                    
+
+                }
+                .padding(.horizontal, 15)
+                //.background(.yellow)
                
                 AppNavigationButton(
                     title: "Créditos",

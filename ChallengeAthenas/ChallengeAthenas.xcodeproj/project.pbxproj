@@ -24,6 +24,10 @@
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
+		E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */; };
+		E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */; };
+		E99A2E10290B0F3700175BF8 /* xilosa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0B290B08D600175BF8 /* xilosa.ttf */; };
+		E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A2E11290B156900175BF8 /* AppInitalButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,7 @@
 		E99A2E0B290B08D600175BF8 /* xilosa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xilosa.ttf; sourceTree = "<group>"; };
 		E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xilo-sans.ttf"; sourceTree = "<group>"; };
 		E99A2E0D290B096700175BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E99A2E11290B156900175BF8 /* AppInitalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitalButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,7 @@
 			children = (
 				44C365D028F99A55007B9868 /* AppButton.swift */,
 				44C365D528FA45A4007B9868 /* AppNavigationButton.swift */,
+				E99A2E11290B156900175BF8 /* AppInitalButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -214,6 +220,9 @@
 			files = (
 				44C365C628F98B30007B9868 /* Preview Assets.xcassets in Resources */,
 				44C365C328F98B30007B9868 /* Assets.xcassets in Resources */,
+				E99A2E10290B0F3700175BF8 /* xilosa.ttf in Resources */,
+				E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */,
+				E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +248,7 @@
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
 				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
+				E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
