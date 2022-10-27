@@ -71,31 +71,54 @@ struct CreditsView: View {
             .edgesIgnoringSafeArea(.all)
             .offset(x: 24, y: 56)
             
-            VStack(spacing: 80) {
+            HStack {
+                Spacer()
+                    .frame(width: 36)
                 
-                VStack(spacing: 48) {
+                VStack(spacing: 64) {
                     
-                    Image("gameTitleColored")
-                    
-                    LazyVGrid(columns: column, spacing: 32) {
-                        ForEach(0..<5) { index in
-                            Text("Pessoa")
-                                .font(.system(size: 20, weight: .regular, design: .monospaced))
-                                .foregroundColor(.white)
-                            
-                            Text("Cargo")
-                                .font(.system(size: 14, weight: .regular, design: .monospaced))
-                                .foregroundColor(.white)
+                    VStack(spacing: 48) {
+                        
+                        Image("gameTitleColored")
+                            .aspectRatio(contentMode: .fit)
+                        
+                        HStack {
+                            LazyVGrid(columns: column, spacing: 32) {
+                                ForEach(0..<TeamArray.teamMembers.count) { index in
+                                    
+                                    VStack {
+                                        
+                                        HStack {
+                                            Text(TeamArray.teamMembers[index].member)
+                                                .font(.system(size: 20, weight: .regular, design: .monospaced))
+                                                .foregroundColor(.white)
+                                            
+                                            Spacer()
+                                        }
+                                        
+                                        Spacer()
+                                    }
+                                    
+                                    HStack {
+                                        Text(TeamArray.teamMembers[index].role)
+                                            .font(.system(size: 14, weight: .regular, design: .monospaced))
+                                            .foregroundColor(.white)
+                                        Spacer()
+                                    }
+                                }
+                            }
                         }
                     }
+                    
+                    Text("para: \nmaricota, toy, luke, yoda, fofa, poppy e ode ")
+                        .padding()
+                        .font(.system(size: 20, weight: .regular, design: .monospaced))
+                        .foregroundColor(.white)
+                        .lineSpacing(3)
+                        .multilineTextAlignment(.center)
                 }
                 
-                Text("para: \nmaricota, toy, luke, yoda, fofa, poppy e ode ")
-                    .padding()
-                    .font(.system(size: 20, weight: .regular, design: .monospaced))
-                    .foregroundColor(.white)
-                    .lineSpacing(3)
-                    .multilineTextAlignment(.center)
+                Spacer()
             }
             
         }
