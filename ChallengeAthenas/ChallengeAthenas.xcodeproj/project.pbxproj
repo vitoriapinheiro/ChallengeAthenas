@@ -26,6 +26,11 @@
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
+		E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B0F7E290B1D3500E50277 /* CreditsButton.swift */; };
+		E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */; };
+		E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */; };
+		E99A2E10290B0F3700175BF8 /* xilosa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0B290B08D600175BF8 /* xilosa.ttf */; };
+		E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A2E11290B156900175BF8 /* AppInitalButton.swift */; };
 		D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* FutureSheet.swift */; };
 		D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31A29075FFB00243041 /* PopUpTitle.swift */; };
 		D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31C2907683100243041 /* NotYetSheet.swift */; };
@@ -52,6 +57,12 @@
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
+		E97B0F7E290B1D3500E50277 /* CreditsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsButton.swift; sourceTree = "<group>"; };
+		E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cordel-rustika.otf"; sourceTree = "<group>"; };
+		E99A2E0B290B08D600175BF8 /* xilosa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xilosa.ttf; sourceTree = "<group>"; };
+		E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xilo-sans.ttf"; sourceTree = "<group>"; };
+		E99A2E0D290B096700175BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E99A2E11290B156900175BF8 /* AppInitalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitalButton.swift; sourceTree = "<group>"; };
 		D4EAE318290729CD00243041 /* FutureSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureSheet.swift; sourceTree = "<group>"; };
 		D4EAE31A29075FFB00243041 /* PopUpTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTitle.swift; sourceTree = "<group>"; };
 		D4EAE31C2907683100243041 /* NotYetSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotYetSheet.swift; sourceTree = "<group>"; };
@@ -87,6 +98,8 @@
 		44C365BD28F98B2E007B9868 /* ChallengeAthenas */ = {
 			isa = PBXGroup;
 			children = (
+				E99A2E0D290B096700175BF8 /* Info.plist */,
+				E99A2E09290B089200175BF8 /* Fonts */,
 				44C365D228F99A61007B9868 /* Components */,
 				44C365CF28F99A30007B9868 /* Views */,
 				44C365BE28F98B2E007B9868 /* ChallengeAthenasApp.swift */,
@@ -124,6 +137,8 @@
 			children = (
 				44C365D028F99A55007B9868 /* AppButton.swift */,
 				44C365D528FA45A4007B9868 /* AppNavigationButton.swift */,
+				E99A2E11290B156900175BF8 /* AppInitalButton.swift */,
+				E97B0F7E290B1D3500E50277 /* CreditsButton.swift */,
 				D4EAE31A29075FFB00243041 /* PopUpTitle.swift */,
 			);
 			path = Components;
@@ -151,6 +166,16 @@
 				CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */,
 			);
 			path = Dialogue;
+			sourceTree = "<group>";
+		};
+		E99A2E09290B089200175BF8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */,
+				E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */,
+				E99A2E0B290B08D600175BF8 /* xilosa.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +238,9 @@
 			files = (
 				44C365C628F98B30007B9868 /* Preview Assets.xcassets in Resources */,
 				44C365C328F98B30007B9868 /* Assets.xcassets in Resources */,
+				E99A2E10290B0F3700175BF8 /* xilosa.ttf in Resources */,
+				E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */,
+				E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +253,7 @@
 			files = (
 				44C365CD28F991DE007B9868 /* MenuView.swift in Sources */,
 				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
+				E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */,
 				A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */,
 				CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */,
 				D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */,
@@ -243,6 +272,7 @@
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
 				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
+				E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +404,7 @@
 				DEVELOPMENT_TEAM = PST723S8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChallengeAthenas/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Hellcife;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -404,6 +435,7 @@
 				DEVELOPMENT_TEAM = PST723S8CA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChallengeAthenas/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Hellcife;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

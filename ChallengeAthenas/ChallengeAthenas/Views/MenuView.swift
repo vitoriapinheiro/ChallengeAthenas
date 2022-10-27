@@ -2,65 +2,94 @@
 //  MenuView.swift
 //  ChallengeAthenas
 //
-//  Created by vivi on 14/10/22.
+//  Created by thaxz on 27/10/22.
 //
 
 import Foundation
 import SwiftUI
 
 struct MenuView: View {
+    
     @Binding var level: Int
+    
     let credits: Bool = false
+    
     let bkgImg: [String] = [
-        "marco-zero",
-        "hell",
-        "beach"
+        "marcoMenu",
+        "hell"
     ]
     
     var body: some View {
+        
         ZStack{
+            
+            Rectangle()
+                .ignoresSafeArea(.all)
+                .background(.black)
+            
+            
             Image(bkgImg[level])
                 .resizable()
                 .ignoresSafeArea(.all)
                 .aspectRatio(contentMode: .fill)
+            
             VStack {
+                
+                VStack(spacing: -50) {
+                    
+                    Image("gameTitle")
+                        .padding(.vertical, 50)
+                    
+                    Text("os Nove Circulos")
+                        .font(.custom("xilosa", size: 32))
+                        .foregroundColor(.white)
+                }
+                
                 Spacer()
-                AppNavigationButton(
-                    title: "CONTINUAR",
-                    nextView: {AnyView(DialogueView())},
-                    isEnable: true,
-                    isFill: true,
-                    height: 48,
-                    width: 300
-                )
-                AppNavigationButton(
-                    title: "MAPA",
-                    nextView: {AnyView(MapView(level: $level))},
-                    isEnable: true,
-                    isFill: true,
-                    height: 48,
-                    width: 300
-                )
-                AppNavigationButton(
-                    title: "CONFIGURAÇÕES",
-                    nextView: {AnyView(SettingsView())},
-                    isEnable: false,
-                    isFill: true,
-                    height: 48,
-                    width: 300
-                )
-                AppNavigationButton(
-                    title: "créditos",
-                    nextView: {AnyView(CreditsView())},
-                    isEnable: true,
-                    isFill: false,
-                    height: 48,
-                    width: 300
-                )
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+
+                
+                VStack(spacing: 16){
+                    
+                    AppInitialButton(
+                        title: "CONTINUAR",
+                        nextView: {AnyView(DialogueView())},
+                        isSecondary: false
+                    )
+                    
+                    HStack(spacing: 16){
+                        
+                        AppInitialButton(
+                            title: "NOVO JOGO",
+                            nextView: {AnyView(DialogueView())},
+                            isSecondary: true
+                        )
+                        
+                        AppInitialButton(
+                            title: "MODO DUELO",
+                            nextView: {AnyView(MapView())},
+                            isSecondary: true
+                        )
+                        
+                    } .padding(.horizontal, 15)
+                    
+                    
+                    CreditsButton(
+                        nextView: {AnyView(CreditsView())}
+                    )
+                    
+                    .padding(.bottom, 90)
+                    
+                }
             }
             
+            
         }
+    }
+}
+
+struct MenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
