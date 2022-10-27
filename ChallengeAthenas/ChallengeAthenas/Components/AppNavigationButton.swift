@@ -11,7 +11,10 @@ import SwiftUI
 struct AppNavigationButton: View {
     let title: String
     let nextView: () -> AnyView
+    let isEnable: Bool
     let isFill: Bool
+    let height: CGFloat
+    let width: CGFloat
     
     var body: some View {
         NavigationLink(
@@ -19,11 +22,23 @@ struct AppNavigationButton: View {
             label: {
                 Text(title)
                     .bold()
-                    .foregroundColor(isFill ? Color.white : Color.pink)
+                    .foregroundColor(isEnable ? Color.white : Color(red: 0.50, green: 0.22, blue: 0.00))
                     .frame(width: 300, height: 48)
-                    .background(isFill ? Color.pink : Color.white.opacity(0))
-                    .cornerRadius(16)
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
+                    .background(isFill ?
+                                (isEnable ?
+                                 Image("botao")
+                                    .resizable()
+                                    .opacity(100)
+                                 :
+                                Image("botaoSecundario")
+                                    .resizable()
+                                    .opacity(100)
+                                )
+                                :
+                                Image("botao")
+                                .resizable()
+                                .opacity(0)
+                    )
             }
         )
     }

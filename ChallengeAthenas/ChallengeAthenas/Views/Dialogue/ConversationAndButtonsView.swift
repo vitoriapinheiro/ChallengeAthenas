@@ -96,42 +96,20 @@ struct ConversationAndButtonsView: View {
             HStack {
                 Spacer()
                     .frame(width: 16)
-                ZStack{
-                    Image("botao")
-                        .resizable()
-                        .frame(width: 102, height: 34)
-                    Text("pular tudo")
-                        .foregroundColor(.white)
-                        .onTapGesture {
-                            dialoguePosition.position = LevelArray().levels[levelNumber.level].dialogueArray.count - 1
-                        }
-                }
-                
+                AppButton(title: "pular tudo", action: {
+                    dialoguePosition.position = LevelArray().levels[levelNumber.level].dialogueArray.count - 1
+                }, enable: true, isFill: true, height: 34, width: 102)
                 Spacer()
                 
                 HStack(spacing: 16) {
                     //Voltar
-                    ZStack{
-                        Image("botao")
-                            .resizable()
-                            .frame(width: 84)
-                            .onTapGesture {
-                                if dialoguePosition.position > 0 {
-                                    dialoguePosition.position -= 1
-                                }
-                            }
-                        Text("voltar")
-                            .foregroundColor(.white)
-                    }
+                    AppButton(title: "voltar", action: {
+                        if dialoguePosition.position > 0 {
+                            dialoguePosition.position -= 1
+                        }
+                    }, enable: true, isFill: true, height: 34, width: 84)
                     
-                    ZStack{
-                        Image("botao")
-                            .resizable()
-                            .frame(width: 84)
-                        
-                        Text("auto")
-                            .foregroundColor(.white)
-                    }
+                    AppButton(title: "auto", action: {}, enable: true, isFill: true, height: 34, width: 84)
                     
                 }.frame(height: 34)
                 
