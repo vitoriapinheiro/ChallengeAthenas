@@ -26,24 +26,36 @@ struct MenuView: View {
             VStack {
                 Spacer()
                 AppNavigationButton(
-                    title: "Continuar história",
+                    title: "CONTINUAR",
                     nextView: {AnyView(DialogueView())},
-                    isFill: true
+                    isEnable: true,
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
                 AppNavigationButton(
-                    title: "Ir para o Mapa",
+                    title: "MAPA",
                     nextView: {AnyView(MapView(level: $level))},
-                    isFill: true
+                    isEnable: true,
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
                 AppNavigationButton(
-                    title: "Configurações",
+                    title: "CONFIGURAÇÕES",
                     nextView: {AnyView(SettingsView())},
-                    isFill: true
+                    isEnable: false,
+                    isFill: true,
+                    height: 48,
+                    width: 300
                 )
                 AppNavigationButton(
-                    title: "Créditos",
+                    title: "créditos",
                     nextView: {AnyView(CreditsView())},
-                    isFill: false
+                    isEnable: true,
+                    isFill: false,
+                    height: 48,
+                    width: 300
                 )
                 .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
             }

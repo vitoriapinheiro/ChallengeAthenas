@@ -24,8 +24,6 @@ struct AppButton: View {
                 .bold()
                 .foregroundColor(enable ? Color.white : Color(red: 0.50, green: 0.22, blue: 0.00))
                 .frame(width: width, height: height)
-            //.background(isFill ? (enable ? Color.pink: Color.gray) : Color.white.opacity(0))
-            // .background(isFill ? (enable ? Image("botao").opacity(100) : Image("botaoSecundario").opacity(100)) : Image("botao").opacity(0) )
                 .background(
                     isFill ?
                     (enable ?
