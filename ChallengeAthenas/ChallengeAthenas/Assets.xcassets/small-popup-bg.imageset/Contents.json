@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Nivel Indisponivel (MODAL).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Nivel Indisponivel (MODAL)@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Nivel Indisponivel (MODAL)@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

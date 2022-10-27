@@ -32,7 +32,7 @@ struct MenuView: View {
                 )
                 AppNavigationButton(
                     title: "Ir para o Mapa",
-                    nextView: {AnyView(MapView())},
+                    nextView: {AnyView(MapView(level: $level))},
                     isFill: true
                 )
                 AppNavigationButton(

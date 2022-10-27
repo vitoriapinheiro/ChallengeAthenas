@@ -21,6 +21,9 @@
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
+		D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* FutureSheet.swift */; };
+		D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31A29075FFB00243041 /* PopUpTitle.swift */; };
+		D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31C2907683100243041 /* NotYetSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
+		D4EAE318290729CD00243041 /* FutureSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureSheet.swift; sourceTree = "<group>"; };
+		D4EAE31A29075FFB00243041 /* PopUpTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTitle.swift; sourceTree = "<group>"; };
+		D4EAE31C2907683100243041 /* NotYetSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotYetSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 				44C365D928FA4950007B9868 /* MapView.swift */,
 				44C365D328FA41EF007B9868 /* SettingsView.swift */,
 				44C365D728FA4907007B9868 /* CreditsView.swift */,
+				D4EAE318290729CD00243041 /* FutureSheet.swift */,
+				D4EAE31C2907683100243041 /* NotYetSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			children = (
 				44C365D028F99A55007B9868 /* AppButton.swift */,
 				44C365D528FA45A4007B9868 /* AppNavigationButton.swift */,
+				D4EAE31A29075FFB00243041 /* PopUpTitle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -194,9 +203,12 @@
 				44C365CD28F991DE007B9868 /* MenuView.swift in Sources */,
 				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
 				44C365D828FA4907007B9868 /* CreditsView.swift in Sources */,
+				D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */,
+				D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */,
 				44C365C128F98B2E007B9868 /* ContentView.swift in Sources */,
 				CAF72E79290235370091513A /* PauseButtonView.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
+				D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */,
 				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
 				44C365D128F99A55007B9868 /* AppButton.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
