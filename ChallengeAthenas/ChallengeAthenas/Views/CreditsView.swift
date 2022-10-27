@@ -15,6 +15,10 @@ struct CreditsView: View {
     
     var backgroundGradient: LinearGradient?
     
+    let column = [
+        GridItem(),
+        GridItem()
+    ]
     
     init() {
         self.backgroundGradient = LinearGradient(
@@ -26,29 +30,19 @@ struct CreditsView: View {
         ZStack {
             backgroundGradient
                 .edgesIgnoringSafeArea(.all)
+            
             VStack {
                 Spacer()
+                    .frame(height: 29)
                 HStack {
                     Spacer()
-                    Image("luaTemporaria")
+                    Image("luaPreta")
+                        .aspectRatio(contentMode: .fit)
                         .rotationEffect(Angle(degrees: 2))
                     Spacer()
                         .frame(width: 8)
                 }
                 Spacer()
-                    .frame(height: 700)
-            }
-            
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Image("cactoTemporario")
-                    Spacer()
-                        .frame(width: 290)
-                }
-                Spacer()
-                    .frame(height: 0)
             }
             .edgesIgnoringSafeArea(.all)
             
@@ -56,13 +50,54 @@ struct CreditsView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Image("fogueiraTemporaria")
+                    Image("cactos")
+                        .aspectRatio(contentMode: .fit)
+                    Spacer()
+                        .frame(width: 290)
+                }
+            }
+            .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image("fogueira")
+                        .aspectRatio(contentMode: .fit)
                     Spacer()
                         .frame(width: 0)
                 }
-                Spacer()
-                    .frame(height: 0)
-            } .edgesIgnoringSafeArea(.all)
+            }
+            .edgesIgnoringSafeArea(.all)
+            .offset(x: 24, y: 56)
+            
+            VStack(spacing: 80) {
+                
+                VStack(spacing: 48) {
+                    
+                    Image("gameTitleColored")
+                    
+                    LazyVGrid(columns: column, spacing: 32) {
+                        ForEach(0..<5) { index in
+                            Text("Pessoa")
+                                .font(.system(size: 20, weight: .regular, design: .monospaced))
+                                .foregroundColor(.white)
+                            
+                            Text("Cargo")
+                                .font(.system(size: 14, weight: .regular, design: .monospaced))
+                                .foregroundColor(.white)
+                        }
+                    }
+                }
+                
+                Text("para: \nmaricota, toy, luke, yoda, fofa, poppy e ode ")
+                    .padding()
+                    .font(.system(size: 20, weight: .regular, design: .monospaced))
+                    .foregroundColor(.white)
+                    .lineSpacing(3)
+                    .multilineTextAlignment(.center)
+            }
+            
         }
     }
 }

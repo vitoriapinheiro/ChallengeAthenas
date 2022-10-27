@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Firme 1.png",
+      "filename" : "fogueira.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Firme 1@2x.png",
+      "filename" : "fogueira@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Firme 1@3x.png",
+      "filename" : "fogueira@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
