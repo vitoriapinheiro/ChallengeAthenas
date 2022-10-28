@@ -21,14 +21,21 @@ struct MapView: View {
     
     var body: some View {
         ZStack{
-            Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
-                Image(systemName: "house")
-                    .foregroundColor(Color.white)
-                    .frame(width: 52, height: 52)
-                    .background(Color.orange)
-                    .cornerRadius(30)
+            VStack {
+                Spacer().frame(height: 16)
+                HStack {
+                    Spacer().frame(width: 16)
+                    Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
+                        Image(systemName: "house")
+                            .foregroundColor(Color.white)
+                            .frame(width: 52, height: 52)
+                            .background(Color(red: 0.90, green: 0.39, blue: 0.00))
+                            .cornerRadius(30)
+                    }
+                    Spacer()
+                }
+                Spacer()
             }
-            .offset(x: -134, y: -316)
             Button(action: {
                 print("0")
             }) {
@@ -53,7 +60,7 @@ struct MapView: View {
                 }
             }
             .offset(x: 1.5, y: 235)
-
+            
             Button(action: {
                 showPopUp = true
             }) {
@@ -67,11 +74,11 @@ struct MapView: View {
                 }
             }
             .offset(x: 46, y: 144)
-                
+            
             //            if showPopUp == true {
             //                FutureSheet(sheetIsActive: $showPopUp)
             //            }
-
+            
             .navigationBarBackButtonHidden(true)
             if showPopUp {
                 FutureSheet(showPopUp: $showPopUp)

@@ -16,7 +16,7 @@ struct PopUpTitle: View {
             .foregroundColor(Color.yellow)
             .fontWeight(.semibold)
             .multilineTextAlignment(.center)
-            .font(.custom("SF Pro", size: 38))
+            .font(.custom("xilosa", size: 48))
             .frame(width: UIScreen.main.bounds.width - 60, alignment: .center)
     }
 }

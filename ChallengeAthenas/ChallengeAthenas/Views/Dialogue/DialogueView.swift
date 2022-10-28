@@ -27,6 +27,7 @@ struct DialogueView: View {
         let actualLevel = levelArray.levels[levelNumber.level]
         
         ZStack {
+            Color.black.opacity(0.2).ignoresSafeArea()
             
             //Personagem
             if dialoguePosition.position > 4  && levelNumber.level == 0 {
@@ -80,6 +81,7 @@ struct DialogueView: View {
                         HStack{
                             Spacer().frame(width: 16)
                             Text(actualLevel.title)
+                                .font(.custom("xilosa", size: 22))
                                 .foregroundColor(.white)
                             Spacer()
                         }
@@ -99,7 +101,7 @@ struct DialogueView: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .ignoresSafeArea()
-        )
+        ).navigationBarBackButtonHidden(true)
     }
 }
 

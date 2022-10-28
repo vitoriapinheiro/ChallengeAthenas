@@ -23,7 +23,9 @@ struct SettingsView: View {
                     enable: true,
                     isFill: true,
                     height: 48,
-                    width: 300
+                    width: 300,
+                    big: false,
+                    size: 16
                 )
                 AppButton(
                     title: "Volume da música",
@@ -33,7 +35,9 @@ struct SettingsView: View {
                     enable: true,
                     isFill: true,
                     height: 48,
-                    width: 300
+                    width: 300,
+                    big: false,
+                    size: 16
                 )
                 AppButton(
                     title: "Vibrações",
@@ -41,7 +45,9 @@ struct SettingsView: View {
                     enable: true,
                     isFill: true,
                     height: 48,
-                    width: 300
+                    width: 300,
+                    big: false,
+                    size: 16
                 )
             }
             if showLoading{

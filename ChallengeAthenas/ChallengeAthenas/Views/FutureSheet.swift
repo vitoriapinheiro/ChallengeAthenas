@@ -15,36 +15,39 @@ struct FutureSheet: View {
         ZStack {
             Color.black.opacity(0.5)
                 .onTapGesture {
-                                    showPopUp = false
-                                }
+                    showPopUp = false
+                }
                 .ignoresSafeArea()
-            VStack {
-                PopUpTitle(text: "PRO\nFUTURO")
-                Image("luaIMG")
-                    .fixedSize()
-                Text("Tamo trabalhando em coisa massa pra tu! Fica de olho...")
-                    .foregroundColor(Color.white)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    .font(.custom("SF Pro", size: 20))
-                    .frame(width: 214, alignment: .center)
-                    .padding()
-
-                AppButton(
-                    title: "OK, BOY",
-                    action: {showPopUp = false},
-                    enable: true,
-                    isFill: true,
-                    height: 48,
-                    width: 300
-                )
-            }
             
+            ZStack {
+                Image("big-popup-bg")
+                    .frame(width: 351, height: 501)
+                
+                VStack {
+                    PopUpTitle(text: "PRO\nFUTURO")
+                    Image("luaIMG")
+                        .fixedSize()
+                    Text("Tamo trabalhando em coisa massa pra tu! Fica de olho...")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .font(.custom("xilosa", size: 24))
+                        .frame(width: 214, alignment: .center)
+                        .padding()
+                    
+                    AppButton(
+                        title: "OK, BOY",
+                        action: {showPopUp = false},
+                        enable: true,
+                        isFill: true,
+                        height: 48,
+                        width: 300,
+                        big: true,
+                        size: 20
+                    )
+                }
+            }
         }
-        .background(
-            Image("big-popup-bg")
-                .frame(width: 351, height: 501)
-        )
     }
 }
 

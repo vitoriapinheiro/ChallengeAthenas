@@ -42,6 +42,7 @@ struct ConversationAndButtonsView: View {
                 ZStack {
                     actualLevel.dialogueColor
                     Text(speaker)
+                        .font(.custom("xilosa", size: 24))
                         .foregroundColor(.white)
                         .offset(y: -2)
                     
@@ -66,6 +67,7 @@ struct ConversationAndButtonsView: View {
                             Spacer().frame(width: 16)
                             
                             Text (actualLevel.dialogueArray[dialoguePosition.position])
+                                .font(.system(size: 15))
                                 .foregroundColor(.white)
                             
                             Spacer().frame(width: 16)
@@ -98,7 +100,7 @@ struct ConversationAndButtonsView: View {
                     .frame(width: 16)
                 AppButton(title: "pular tudo", action: {
                     dialoguePosition.position = LevelArray().levels[levelNumber.level].dialogueArray.count - 1
-                }, enable: true, isFill: true, height: 34, width: 102)
+                }, enable: true, isFill: true, height: 34, width: 102, big: false, size: 16)
                 Spacer()
                 
                 HStack(spacing: 16) {
@@ -107,9 +109,9 @@ struct ConversationAndButtonsView: View {
                         if dialoguePosition.position > 0 {
                             dialoguePosition.position -= 1
                         }
-                    }, enable: true, isFill: true, height: 34, width: 84)
+                    }, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
                     
-                    AppButton(title: "auto", action: {}, enable: true, isFill: true, height: 34, width: 84)
+                    AppButton(title: "auto", action: {}, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
                     
                 }.frame(height: 34)
                 
