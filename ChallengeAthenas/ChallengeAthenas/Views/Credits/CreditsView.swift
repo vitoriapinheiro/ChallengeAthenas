@@ -75,12 +75,12 @@ struct CreditsView: View {
                 Spacer()
                     .frame(width: 36)
                 
-                VStack(spacing: 64) {
+                VStack(alignment: .center, spacing: 56) {
                     
-                    VStack(spacing: 48) {
+                    VStack(alignment: .center, spacing: 48) {
                         
-                        Image("gameTitleColored")
-                            .aspectRatio(contentMode: .fit)
+                            Image("gameTitleColored")
+                                .aspectRatio(contentMode: .fit)
                         
                         HStack {
                             LazyVGrid(columns: column, spacing: 32) {
@@ -90,7 +90,7 @@ struct CreditsView: View {
                                         
                                         HStack {
                                             Text(TeamArray.teamMembers[index].member)
-                                                .font(.system(size: 20, weight: .regular, design: .monospaced))
+                                                .font(.custom("xilosa", size: 20))
                                                 .foregroundColor(.white)
                                             
                                             Spacer()
@@ -101,7 +101,7 @@ struct CreditsView: View {
                                     
                                     HStack {
                                         Text(TeamArray.teamMembers[index].role)
-                                            .font(.system(size: 14, weight: .regular, design: .monospaced))
+                                            .font(.custom("xilosa", size: 14))
                                             .foregroundColor(.white)
                                         Spacer()
                                     }
@@ -110,9 +110,9 @@ struct CreditsView: View {
                         }
                     }
                     
-                    Text("para: \nmaricota, toy, luke, yoda, fofa, poppy e ode ")
+                    Text("para: \nmaricota, toy, luke, yoda, \nfofa, poppy e ode ")
                         .padding()
-                        .font(.system(size: 20, weight: .regular, design: .monospaced))
+                        .font(.custom("xilosa", size: 20))
                         .foregroundColor(.white)
                         .lineSpacing(3)
                         .multilineTextAlignment(.center)
