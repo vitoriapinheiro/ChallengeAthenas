@@ -8,8 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct NotYetSheet: View {
+struct SmallSheet: View {
     @Binding var notYetLevel: Bool
+    var title: String
+    var details: String
     
     var body: some View {
         ZStack {
@@ -19,8 +21,8 @@ struct NotYetSheet: View {
                 }
                 .ignoresSafeArea()
             VStack {
-                PopUpTitle(text: "NÍVEL BLOQUEADO")
-                Text("Tu tem que comer muito feijão pra chegar aqui... Termina teus níveis anteriores.")
+                PopUpTitle(text: title)
+                Text(details)
                     .foregroundColor(Color.white)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)

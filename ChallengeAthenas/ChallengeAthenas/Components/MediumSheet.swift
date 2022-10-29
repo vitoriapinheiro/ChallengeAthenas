@@ -8,8 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct FutureSheet: View {
+struct MediumSheet: View {
     @Binding var showPopUp: Bool
+    var imageName: String
+    var title: String
+    var details: String
     
     var body: some View {
         ZStack {
@@ -19,10 +22,10 @@ struct FutureSheet: View {
                                 }
                 .ignoresSafeArea()
             VStack {
-                PopUpTitle(text: "PRO\nFUTURO")
-                Image("luaIMG")
+                PopUpTitle(text: title)
+                Image(imageName)
                     .fixedSize()
-                Text("Tamo trabalhando em coisa massa pra tu! Fica de olho...")
+                Text(details)
                     .foregroundColor(Color.white)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
@@ -48,8 +51,8 @@ struct FutureSheet: View {
     }
 }
 
-struct FutureSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        FutureSheet(showPopUp: MapView(level: ContentView(level: 0).$level).$showPopUp)
-    }
-}
+//struct MediumSheet_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MediumSheet(showPopUp: MapView(level: ContentView(level: 0).$level).$showPopUp)
+//    }
+//}
