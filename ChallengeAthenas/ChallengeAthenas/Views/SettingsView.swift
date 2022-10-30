@@ -87,7 +87,8 @@ struct HUDProgressView: View {
                 .frame(width: 80, height: 80)
                 .rotationEffect(.init(degrees: animate ? 270 : 0))
             Text(placeholder)
-                .fontWeight(.bold)
+                //.fontWeight(.bold)
+                .font(.custom("xilosa", size: 20))
         }
         .padding(.vertical, 25)
         .padding(.horizontal, 35)
@@ -132,6 +133,7 @@ struct CustomAlertView : View {
                     .font(.title)
                     .foregroundColor(.pink)
                 Text("Você ganhou moreee!")
+                    .font(.custom("xilosa", size: 20))
                 Button(action: {}){
                     Text("Voltar")
                         .foregroundColor(.white)
@@ -169,3 +171,5 @@ struct CustomAlertView : View {
             })
     }
 }
+
+
