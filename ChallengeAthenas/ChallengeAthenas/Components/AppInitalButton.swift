@@ -21,8 +21,6 @@ struct AppInitialButton: View {
                 
                 ZStack {
                     
-                   
-                    
                     Image(isSecondary ? "secondaryButton" : "primaryButton")
                         .frame(width:  isSecondary ? 171 : 358, height: 55)
                     

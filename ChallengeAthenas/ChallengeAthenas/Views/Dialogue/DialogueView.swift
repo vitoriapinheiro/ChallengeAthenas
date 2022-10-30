@@ -28,6 +28,10 @@ struct DialogueView: View {
         
         ZStack {
             
+//            Rectangle()
+//                .ignoresSafeArea(.all)
+//                .background(.black)
+            
             //Personagem
             if dialoguePosition.position > 4  && levelNumber.level == 0 {
                 VStack {
@@ -81,6 +85,7 @@ struct DialogueView: View {
                             Spacer().frame(width: 16)
                             Text(actualLevel.title)
                                 .foregroundColor(.white)
+                                .font(.custom("xilosa", size: 22))
                             Spacer()
                         }
                     }

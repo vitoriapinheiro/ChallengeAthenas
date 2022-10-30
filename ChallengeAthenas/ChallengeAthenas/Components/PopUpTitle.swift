@@ -16,7 +16,13 @@ struct PopUpTitle: View {
             .foregroundColor(Color.yellow)
             .fontWeight(.semibold)
             .multilineTextAlignment(.center)
-            .font(.custom("SF Pro", size: 38))
+            .font(.custom("xilosa", size: 38))
             .frame(width: UIScreen.main.bounds.width - 60, alignment: .center)
+    }
+}
+
+struct PopUpTitle_Previews: PreviewProvider {
+    static var previews: some View {
+        PopUpTitle(text: "teste")
     }
 }

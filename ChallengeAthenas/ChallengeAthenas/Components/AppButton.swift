@@ -24,6 +24,7 @@ struct AppButton: View {
                 .bold()
                 .foregroundColor(enable ? Color.white : Color(red: 0.50, green: 0.22, blue: 0.00))
                 .frame(width: width, height: height)
+                .font(.custom("xilosa", size: 20))
                 .background(
                     isFill ?
                     (enable ?

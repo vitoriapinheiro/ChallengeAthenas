@@ -24,7 +24,7 @@ struct NotYetSheet: View {
                     .foregroundColor(Color.white)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
-                    .font(.custom("SF Pro", size: 20))
+                    .font(.custom("xilosa", size: 20))
                     .frame(width: 214, alignment: .center)
                     .padding()
                 AppButton(
