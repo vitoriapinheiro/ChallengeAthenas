@@ -42,6 +42,7 @@ struct ConversationAndButtonsView: View {
                 ZStack {
                     actualLevel.dialogueColor
                     Text(speaker)
+                        .font(.custom("xilosa", size: 24))
                         .foregroundColor(.white)
                         .offset(y: -2)
                     
@@ -66,6 +67,7 @@ struct ConversationAndButtonsView: View {
                             Spacer().frame(width: 16)
                             
                             Text (actualLevel.dialogueArray[dialoguePosition.position])
+                                .font(.bold(.body)())
                                 .foregroundColor(.white)
                             
                             Spacer().frame(width: 16)

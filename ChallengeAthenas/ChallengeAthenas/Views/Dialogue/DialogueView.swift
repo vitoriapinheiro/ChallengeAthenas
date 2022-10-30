@@ -27,84 +27,85 @@ struct DialogueView: View {
         let actualLevel = levelArray.levels[levelNumber.level]
         
         ZStack {
-            
-//            Rectangle()
-//                .ignoresSafeArea(.all)
-//                .background(.black)
-            
-            //Personagem
-            if dialoguePosition.position > 4  && levelNumber.level == 0 {
-                VStack {
-                    Spacer()
-                    actualLevel.bossImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x:50, y: 50)
-                }.ignoresSafeArea()
-            }
-            
-            if dialoguePosition.position > 0  && levelNumber.level == 1 {
-                VStack {
-                    Spacer()
-                    actualLevel.bossImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x:50, y: 50)
-                    Spacer()
+            Rectangle()
+                .ignoresSafeArea(.all)
+                .background(.black)
+            ZStack {
+                
+                //Personagem
+                if dialoguePosition.position > 4  && levelNumber.level == 0 {
+                    VStack {
+                        Spacer()
+                        actualLevel.bossImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x:50, y: 50)
+                    }.ignoresSafeArea()
                 }
-            }
-            
-            if levelNumber.level == 2 {
-                VStack {
-                    Spacer()
-                    actualLevel.bossImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x:50, y: 50)
-                    Spacer()
-                }
-            }
-            
-            if dialoguePosition.position >= 19 && levelNumber.level == 0 {
-                Color(.black).ignoresSafeArea()
-            }
-            
-            //Caixas de texto e botões de fala
-            ConversationAndButtonsView(observedDialogue: dialoguePosition, observedLevel: levelNumber)
-            
-            //Título
-            if dialoguePosition.position < 2 {
-                VStack{
-                    ZStack{
-                        HStack{
-                            Image("tituloLevel")
-                            Spacer()
-                        }
-                        
-                        HStack{
-                            Spacer().frame(width: 16)
-                            Text(actualLevel.title)
-                                .foregroundColor(.white)
-                                .font(.custom("xilosa", size: 22))
-                            Spacer()
-                        }
+                
+                if dialoguePosition.position > 0  && levelNumber.level == 1 {
+                    VStack {
+                        Spacer()
+                        actualLevel.bossImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x:50, y: 50)
+                        Spacer()
                     }
-                    Spacer()
                 }
-            }
-            
-            //Pause
-            PauseButtonView(sheetIsActive: $pauseIsActive)
-            
-            //PopUp
-            if pauseIsActive {
-                PauseMenuSheet(sheetIsActive: $pauseIsActive)
-            }
-        }.background(actualLevel.background
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .ignoresSafeArea()
-        )
+                
+                if levelNumber.level == 2 {
+                    VStack {
+                        Spacer()
+                        actualLevel.bossImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x:50, y: 50)
+                        Spacer()
+                    }
+                }
+                
+                if dialoguePosition.position >= 19 && levelNumber.level == 0 {
+                    Color(.black).ignoresSafeArea()
+                }
+                
+                //Caixas de texto e botões de fala
+                ConversationAndButtonsView(observedDialogue: dialoguePosition, observedLevel: levelNumber)
+                
+                //Título
+                if dialoguePosition.position < 2 {
+                    VStack{
+                        ZStack{
+                            HStack{
+                                Image("tituloLevel")
+                                Spacer()
+                            }
+                            
+                            HStack{
+                                Spacer().frame(width: 16)
+                                Text(actualLevel.title)
+                                    .foregroundColor(.white)
+                                    .font(.custom("xilosa", size: 22))
+                                Spacer()
+                            }
+                        }
+                        Spacer()
+                    }
+                }
+                
+                //Pause
+                PauseButtonView(sheetIsActive: $pauseIsActive)
+                
+                //PopUp
+                if pauseIsActive {
+                    PauseMenuSheet(sheetIsActive: $pauseIsActive)
+                }
+            }.background(actualLevel.background
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+            )
+        }
     }
 }
 
