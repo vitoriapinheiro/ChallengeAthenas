@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Praia 1.png",
+      "filename" : "Fishbone.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Praia 1@2x.png",
+      "filename" : "Fishbone@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Praia 1@3x.png",
+      "filename" : "Fishbone@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

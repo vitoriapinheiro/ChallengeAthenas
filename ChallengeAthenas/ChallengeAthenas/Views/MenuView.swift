@@ -10,12 +10,7 @@ import SwiftUI
 
 struct MenuView: View {
     @Binding var level: Int
-    let credits: Bool = false
-    let bkgImg: [String] = [
-        "marco-zero",
-        "hell",
-        "beach"
-    ]
+    let bkgImg: [String] = ["praia"]
     
     var body: some View {
         ZStack{
