@@ -65,7 +65,7 @@ struct MenuView: View {
                         )
                         
                         AppInitialButton(
-                            title: "MODO DUELO",
+                            title: "NÍVEIS",
                             nextView: {AnyView(DialogueView())},
                             isSecondary: true
                         )
