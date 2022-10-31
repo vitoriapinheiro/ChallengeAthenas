@@ -16,6 +16,9 @@
 		44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D328FA41EF007B9868 /* SettingsView.swift */; };
 		44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D528FA45A4007B9868 /* AppNavigationButton.swift */; };
 		44C365DA28FA4950007B9868 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C365D928FA4950007B9868 /* MapView.swift */; };
+		A33BBE7F2910595700F6D092 /* CreditsBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BBE7E2910595700F6D092 /* CreditsBackgroundView.swift */; };
+		A33BBE81291060AF00F6D092 /* CreditsGridLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BBE80291060AF00F6D092 /* CreditsGridLabel.swift */; };
+		A33BBE83291062E600F6D092 /* CreditsBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BBE82291062E600F6D092 /* CreditsBackgroundImage.swift */; };
 		A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAE9290B1521004BCAFB /* Team.swift */; };
 		A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */; };
 		A3D0AAEE290B255F004BCAFB /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAED290B255F004BCAFB /* CreditsView.swift */; };
@@ -48,6 +51,9 @@
 		44C365D328FA41EF007B9868 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		44C365D528FA45A4007B9868 /* AppNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationButton.swift; sourceTree = "<group>"; };
 		44C365D928FA4950007B9868 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		A33BBE7E2910595700F6D092 /* CreditsBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsBackgroundView.swift; sourceTree = "<group>"; };
+		A33BBE80291060AF00F6D092 /* CreditsGridLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsGridLabel.swift; sourceTree = "<group>"; };
+		A33BBE82291062E600F6D092 /* CreditsBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsBackgroundImage.swift; sourceTree = "<group>"; };
 		A3D0AAE9290B1521004BCAFB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamArray.swift; sourceTree = "<group>"; };
 		A3D0AAED290B255F004BCAFB /* CreditsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
@@ -150,8 +156,11 @@
 		A3D0AAE8290B10BE004BCAFB /* Credits */ = {
 			isa = PBXGroup;
 			children = (
-				A3D0AAE9290B1521004BCAFB /* Team.swift */,
 				A3D0AAED290B255F004BCAFB /* CreditsView.swift */,
+				A33BBE80291060AF00F6D092 /* CreditsGridLabel.swift */,
+				A33BBE7E2910595700F6D092 /* CreditsBackgroundView.swift */,
+				A33BBE82291062E600F6D092 /* CreditsBackgroundImage.swift */,
+				A3D0AAE9290B1521004BCAFB /* Team.swift */,
 				A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */,
 			);
 			path = Credits;
@@ -263,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C365CD28F991DE007B9868 /* MenuView.swift in Sources */,
+				A33BBE83291062E600F6D092 /* CreditsBackgroundImage.swift in Sources */,
 				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
 				E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */,
 				A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */,
@@ -270,9 +280,11 @@
 				44C365C128F98B2E007B9868 /* ContentView.swift in Sources */,
 				D43AC4DB290CAC9D00461FF1 /* ErrorView.swift in Sources */,
 				CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */,
+				A33BBE7F2910595700F6D092 /* CreditsBackgroundView.swift in Sources */,
 				CAF72E79290235370091513A /* PauseButtonView.swift in Sources */,
 				A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
+				A33BBE81291060AF00F6D092 /* CreditsGridLabel.swift in Sources */,
 				D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */,
 				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
 				44C365D128F99A55007B9868 /* AppButton.swift in Sources */,
