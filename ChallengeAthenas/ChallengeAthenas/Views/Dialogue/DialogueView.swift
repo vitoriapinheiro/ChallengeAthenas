@@ -25,29 +25,20 @@ struct DialogueView: View {
     
     var body: some View {
         let actualLevel = levelArray.levels[levelNumber.level]
-        
         ZStack {
-            Color.black.opacity(0.2).ignoresSafeArea()
+            Color.black.ignoresSafeArea()
             
-            //Personagem
-            if dialoguePosition.position > 4  && levelNumber.level == 0 {
-                VStack {
-                    Spacer()
-                    actualLevel.bossImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x:50, y: 50)
-                }.ignoresSafeArea()
-            }
-            
-            if dialoguePosition.position > 0  && levelNumber.level == 1 {
-                VStack {
-                    Spacer()
-                    actualLevel.bossImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x:50, y: 50)
-                    Spacer()
+            ZStack {
+                
+                //Personagem
+                if dialoguePosition.position > 4  && levelNumber.level == 0 {
+                    VStack {
+                        Spacer()
+                        actualLevel.bossImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x:50, y: 50)
+                    }.ignoresSafeArea()
                 }
                 
                 if dialoguePosition.position > 0  && levelNumber.level == 1 {
@@ -60,48 +51,61 @@ struct DialogueView: View {
                         Spacer()
                     }
                 }
-            }
-            
-            if dialoguePosition.position >= 19 && levelNumber.level == 0 {
-                Color(.black).ignoresSafeArea()
-            }
-            
-            //Caixas de texto e botões de fala
-            ConversationAndButtonsView(observedDialogue: dialoguePosition, observedLevel: levelNumber)
-            
-            //Título
-            if dialoguePosition.position < 2 {
-                VStack{
-                    ZStack{
-                        HStack{
-                            Image("tituloLevel")
-                            Spacer()
-                        }
-                        
-                        HStack{
-                            Spacer().frame(width: 16)
-                            Text(actualLevel.title)
-                                .font(.custom("xilosa", size: 22))
-                                .foregroundColor(.white)
+                
+                if dialoguePosition.position >= 19 && levelNumber.level == 0 {
+                    Color(.black).ignoresSafeArea()
+                }
+                
+                //Chico
+                if levelNumber.level == 2 {
+                    VStack {
+                        Spacer()
+                        actualLevel.bossImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x:50, y: 50)
+                        Spacer()
+                    }
+                }
+                
+                //Caixas de texto e botões de fala
+                ConversationAndButtonsView(observedDialogue: dialoguePosition, observedLevel: levelNumber)
+                
+                //Título
+                if dialoguePosition.position < 2 {
+                    VStack{
+                        ZStack{
+                            HStack{
+                                Image("tituloLevel")
+                                Spacer()
+                            }
+                            
+                            HStack{
+                                Spacer().frame(width: 16)
+                                Text(actualLevel.title)
+                                    .font(.custom("xilosa", size: 22))
+                                    .foregroundColor(.white)
+                                Spacer()
+                            }
                             Spacer()
                         }
                         Spacer()
                     }
                 }
-            }
-            
-            //Pause
-            PauseButtonView(sheetIsActive: $pauseIsActive)
-            
-            //PopUp
-            if pauseIsActive {
-                PauseMenuSheet(sheetIsActive: $pauseIsActive)
-            }
-        }.background(actualLevel.background
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .ignoresSafeArea()
-        ).navigationBarBackButtonHidden(true)
+                
+                //Pause
+                PauseButtonView(sheetIsActive: $pauseIsActive)
+                
+                //PopUp
+                if pauseIsActive {
+                    PauseMenuSheet(sheetIsActive: $pauseIsActive)
+                }
+            }.background(actualLevel.background
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+            ).navigationBarBackButtonHidden(true)
+        }
     }
 }
 

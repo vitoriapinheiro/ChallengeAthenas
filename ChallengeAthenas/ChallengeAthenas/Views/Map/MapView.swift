@@ -84,10 +84,10 @@ struct MapView: View {
             
             .navigationBarBackButtonHidden(true)
             if showPopUp {
-                FutureSheet(showPopUp: $showPopUp)
+                MediumSheet(showPopUp: $showPopUp, imageName: "luaPreta", title: "PRO\nFUTURO", details: "Tamo trabalhando em coisa massa pra tu! Fica de olho...")
             }
             if notYetLevel {
-                NotYetSheet(notYetLevel: $notYetLevel)
+                SmallSheet(notYetLevel: $notYetLevel, title: "NÍVEL BLOQUEADO", details: "Tu tem que comer muito feijão pra chegar aqui... Termina teus níveis anteriores.")
             }
         }
         .background(

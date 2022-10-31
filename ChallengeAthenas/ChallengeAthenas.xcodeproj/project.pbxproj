@@ -22,13 +22,14 @@
 		CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE429070A9700E3AEC3 /* Level.swift */; };
 		CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */; };
 		CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */; };
+		CA5E4E1C29104AAE00ED5106 /* SmallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5E4E1B29104AAE00ED5106 /* SmallSheet.swift */; };
+		CA5E4E1E29104AD400ED5106 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5E4E1D29104AD400ED5106 /* MediumSheet.swift */; };
 		CAF72E79290235370091513A /* PauseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E75290235370091513A /* PauseButtonView.swift */; };
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
-		D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* FutureSheet.swift */; };
+		D43AC4DB290CAC9D00461FF1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */; };
 		D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31A29075FFB00243041 /* PopUpTitle.swift */; };
-		D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31C2907683100243041 /* NotYetSheet.swift */; };
 		E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B0F7E290B1D3500E50277 /* CreditsButton.swift */; };
 		E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */; };
 		E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0C290B08D600175BF8 /* xilo-sans.ttf */; };
@@ -53,13 +54,14 @@
 		CA4EDDE429070A9700E3AEC3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelArray.swift; sourceTree = "<group>"; };
 		CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDialogueButton.swift; sourceTree = "<group>"; };
+		CA5E4E1B29104AAE00ED5106 /* SmallSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSheet.swift; sourceTree = "<group>"; };
+		CA5E4E1D29104AD400ED5106 /* MediumSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumSheet.swift; sourceTree = "<group>"; };
 		CAF72E75290235370091513A /* PauseButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButtonView.swift; sourceTree = "<group>"; };
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
-		D4EAE318290729CD00243041 /* FutureSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureSheet.swift; sourceTree = "<group>"; };
+		D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D4EAE31A29075FFB00243041 /* PopUpTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTitle.swift; sourceTree = "<group>"; };
-		D4EAE31C2907683100243041 /* NotYetSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotYetSheet.swift; sourceTree = "<group>"; };
 		E97B0F7E290B1D3500E50277 /* CreditsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsButton.swift; sourceTree = "<group>"; };
 		E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cordel-rustika.otf"; sourceTree = "<group>"; };
 		E99A2E0B290B08D600175BF8 /* xilosa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xilosa.ttf; sourceTree = "<group>"; };
@@ -120,14 +122,13 @@
 		44C365CF28F99A30007B9868 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CAF72E74290235370091513A /* Dialogue */,
+				D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */,
 				44C365C028F98B2E007B9868 /* ContentView.swift */,
 				44C365CC28F991DE007B9868 /* MenuView.swift */,
-				44C365D928FA4950007B9868 /* MapView.swift */,
 				44C365D328FA41EF007B9868 /* SettingsView.swift */,
+				CAF72E74290235370091513A /* Dialogue */,
 				A3D0AAE8290B10BE004BCAFB /* Credits */,
-				D4EAE318290729CD00243041 /* FutureSheet.swift */,
-				D4EAE31C2907683100243041 /* NotYetSheet.swift */,
+				D43AC4DC290CACB200461FF1 /* Map */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +141,8 @@
 				E99A2E11290B156900175BF8 /* AppInitalButton.swift */,
 				E97B0F7E290B1D3500E50277 /* CreditsButton.swift */,
 				D4EAE31A29075FFB00243041 /* PopUpTitle.swift */,
+				CA5E4E1D29104AD400ED5106 /* MediumSheet.swift */,
+				CA5E4E1B29104AAE00ED5106 /* SmallSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -166,6 +169,14 @@
 				CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */,
 			);
 			path = Dialogue;
+			sourceTree = "<group>";
+		};
+		D43AC4DC290CACB200461FF1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				44C365D928FA4950007B9868 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		E99A2E09290B089200175BF8 /* Fonts */ = {
@@ -256,9 +267,8 @@
 				E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */,
 				A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */,
 				CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */,
-				D4EAE319290729CD00243041 /* FutureSheet.swift in Sources */,
-				D4EAE31D2907683100243041 /* NotYetSheet.swift in Sources */,
 				44C365C128F98B2E007B9868 /* ContentView.swift in Sources */,
+				D43AC4DB290CAC9D00461FF1 /* ErrorView.swift in Sources */,
 				CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */,
 				CAF72E79290235370091513A /* PauseButtonView.swift in Sources */,
 				A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */,
@@ -270,7 +280,9 @@
 				CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
+				CA5E4E1E29104AD400ED5106 /* MediumSheet.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
+				CA5E4E1C29104AAE00ED5106 /* SmallSheet.swift in Sources */,
 				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
 				E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */,
 			);
