@@ -15,12 +15,15 @@ struct AppButton: View {
     let isFill: Bool
     let height: CGFloat
     let width: CGFloat
+    let big: Bool
+    let size: CGFloat
     
     var body: some View {
         Button(action: {
             action()
         }, label: {
             Text(title)
+                .font(.custom(big ? "xilosa":"xilo-sans", size: size))
                 .bold()
                 .foregroundColor(enable ? Color.white : Color(red: 0.50, green: 0.22, blue: 0.00))
                 .frame(width: width, height: height)
@@ -48,7 +51,7 @@ struct AppButton: View {
 
 struct AppButton_Previews: PreviewProvider {
     static var previews: some View {
-        AppButton(title: "Botão", action: {}, enable: true, isFill: true, height: 34, width: 102)
+        AppButton(title: "Botão", action: {}, enable: true, isFill: true, height: 34, width: 102, big: false, size: 16)
     }
 }
 
