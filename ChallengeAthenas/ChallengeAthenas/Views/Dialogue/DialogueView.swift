@@ -30,13 +30,13 @@ struct DialogueView: View {
             
             
             ZStack{
-                if dialoguePosition.position == 2 {
+                if dialoguePosition.position == 2 && levelNumber.level == 0{
                     Image("bgEmpty1")
                         .resizable()
                         .ignoresSafeArea()
                 }
                 
-                else if dialoguePosition.position == 3 {
+                else if dialoguePosition.position == 3 && levelNumber.level == 0{
                     Image("bgEmpty2")
                         .resizable()
                         .ignoresSafeArea()
@@ -75,7 +75,8 @@ struct DialogueView: View {
                     }
                 }
                 
-                if dialoguePosition.position >= 19 && levelNumber.level == 0 {
+                // Tela preta
+                if dialoguePosition.position >= 15 && levelNumber.level == 0 {
                     Color(.black).ignoresSafeArea()
                 }
                 

@@ -31,18 +31,15 @@ var level1: Level = Level(title: "1º Círculo: Marco Zero", bossName: "Mofia", 
         "Aqui em Recife, brigamos com passinho. Vou te ensinar a dançar, você tem cara de que tem um gingado escondido aí!",
         // Mostra a tela do jogo
         //Cabou a briga
-        "Pronto, agora tá no grau! Você sabe meter o passinho. Vamo simbora resgatar a jjnfakjdn de Brennand!",
-        "É aqui que ficava a csnkcdnv, né?",
-        "Sim… agora temos essa longa escada que ninguém se atreve a adentrar. É um portal para o reino dos nossos inimigos, os ladrões… para Hellcife!",
-        "Meu Jesus, não achei que fosse tão sério…",
-        "Mas É, herói… E agora, o destino de Recife está em suas mãos…",
+        "Pronto, agora tá no grau! Você sabe meter o passinho.",
+        "Vamo simbora resgatar o Obelisco de Brennand!",
         //Morfia empurra
         //Tela escura
         "dnfnfkwnn!IKN2nkn4342",
         "…",
         "… onde estou?"
         ]
-        ,speakerArray: [true,true,true,false,true,false,true,false,false,true,false,true,false,false,true,false,true,false,true,true,true]
+        ,speakerArray: [true,true,true,false,true,false,true,false,false,true,false,true,false,false,false,true,true,true]
         ,dialogueColor: Color("orange500"))
 
 var level2: Level = Level(title: "2º Círculo: Boa Viagem", bossName: "Cebruthius", bossImage: Image("Cebruthius"), background: Image("Praia"),
