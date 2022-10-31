@@ -101,7 +101,7 @@ struct CreditsView: View {
                                     
                                     HStack {
                                         Text(TeamArray.teamMembers[index].role)
-                                            .font(.custom("xilosa", size: 14))
+                                            .font(.custom("xilosa", size: 16))
                                             .foregroundColor(.white)
                                         Spacer()
                                     }
