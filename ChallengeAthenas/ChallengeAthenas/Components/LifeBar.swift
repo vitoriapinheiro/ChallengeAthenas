@@ -17,7 +17,7 @@ struct Lifebar: View {
             RoundedRectangle(cornerRadius: 0)
                 .background(.pink)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*(96/855))
-                .opacity(0.24)
+                .opacity(status > 116 ? 0.24 : 0.5)
             HStack {
                 VStack {
                     Image(status > 116 ? "full-heart" : "weak-heart")
