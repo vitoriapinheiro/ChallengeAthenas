@@ -20,3 +20,9 @@ struct PopUpTitle: View {
             .frame(width: UIScreen.main.bounds.width - 60, alignment: .center)
     }
 }
+
+struct PopUpTitle_Previews: PreviewProvider {
+    static var previews: some View {
+        PopUpTitle(text: "teste")
+    }
+}

@@ -49,16 +49,16 @@ struct DialogueView: View {
                         .offset(x:50, y: 50)
                     Spacer()
                 }
-            }
-            
-            if levelNumber.level == 2 {
-                VStack {
-                    Spacer()
-                    actualLevel.bossImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x:50, y: 50)
-                    Spacer()
+                
+                if dialoguePosition.position > 0  && levelNumber.level == 1 {
+                    VStack {
+                        Spacer()
+                        actualLevel.bossImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x:50, y: 50)
+                        Spacer()
+                    }
                 }
             }
             
@@ -85,8 +85,8 @@ struct DialogueView: View {
                                 .foregroundColor(.white)
                             Spacer()
                         }
+                        Spacer()
                     }
-                    Spacer()
                 }
             }
             

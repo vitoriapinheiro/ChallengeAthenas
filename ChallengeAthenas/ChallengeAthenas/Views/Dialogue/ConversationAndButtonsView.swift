@@ -67,7 +67,7 @@ struct ConversationAndButtonsView: View {
                             Spacer().frame(width: 16)
                             
                             Text (actualLevel.dialogueArray[dialoguePosition.position])
-                                .font(.system(size: 15))
+                                .font(.bold(.body)())
                                 .foregroundColor(.white)
                             
                             Spacer().frame(width: 16)

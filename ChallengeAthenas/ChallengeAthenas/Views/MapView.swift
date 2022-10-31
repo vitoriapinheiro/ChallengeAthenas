@@ -40,6 +40,7 @@ struct MapView: View {
                 print("0")
             }) {
                 Text("1")
+                    .font(.custom("xilosa", size: 32))
                     .frame(width:44, height:44)
                     .foregroundColor(Color.white)
                     .background(Color.black)
@@ -51,6 +52,7 @@ struct MapView: View {
             ) {
                 ZStack {
                     Text("2")
+                        .font(.custom("xilosa", size: 32))
                         .frame(width:44, height:44)
                         .foregroundColor(level == 1 ? Color.white : Color.black)
                         .background(Color.black)
@@ -66,6 +68,7 @@ struct MapView: View {
             }) {
                 ZStack {
                     Text("3")
+                        .font(.custom("xilosa", size: 32))
                         .frame(width:44, height:44)
                         .foregroundColor(Color.black)
                         .background(Color.black)
