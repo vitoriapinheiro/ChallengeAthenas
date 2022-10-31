@@ -9,22 +9,22 @@ import Foundation
 import SwiftUI
 
 struct LevelArray {
-    let levels: [Level] = [level1, level2, level3]
+    @StateObject var positionLevel = DialoguePosition()
+    var levels: [Level] = [level1, level2, level3]
 }
-    var level1: Level = Level(title: "1º Círculo: Marco Zero", bossName: "Mofia", bossImage: Image("Morfia"), background: Image("marcoLevel"),
+var level1: Level = Level(title: "1º Círculo: Marco Zero", bossName: "Mofia", bossImage: Image("Morfia"), background: Image("marcoLevel"),
         dialogueArray:
         [
         "Finalmente tô conhecendo as atrações de Recife! Que lugar lindo…",
-        "(Tem muito kpopper aqui também…)",
-        "...",//Pan-out pra vista do parque das esculturas. Foco na AUSÊNCIA de pica!
         "Parece ter algo errado… Essa vista tá tão vazia…",
-        "Pois é, nem sempre foi assim.",
-        "...",//Tela vira pra mostrar Morfia, a kpopper das profecias.
+        "...",//Pan-out pra vista do parque das esculturas. Foco na AUSÊNCIA de pica!
+        "Pois é, nem sempre foi assim.",//Tela vira pra mostrar Morfia, a kpopper das profecias.
         "Opa! Quem é você?",
         "Meu nome é Morfia, e você é quem eu procuro. ",
         "EU?! Mas eu nem te conheço, acabei de chegar aqui!",
-        "Acredite, foi profetizado que você iria chegar. As profecias dizem: a primeira pessoa que sentir a falta da magnífica kajfbkdj de Brennand será o herói que a resgatará.",
-        "Ah, acho que eu conheço essa akskask de Brennand. Devo ter visto em alguma foto. Como algo tão grande pode ter sumido? Como irei salvá-la?",
+        "Acredite, foi profetizado sua chegada.",
+        "As profecias dizem: a primeira pessoa que sentir a falta do magnífico Obelisco de Brennand será o herói que a resgatará.",
+        "Ah, acho que eu conheço esse Obelisco. Devo ter visto em alguma foto. Como algo tão grande pode ter sumido? Como irei salvá-la?",
         "Meu papel é te guiar. Temos inimigos poderosos que você já já vai conhecer… Mas agora… venha treinar comigo!",
         "Vish maria… Onde eu me meti?",
         // Briga com Morfia. Algum banner aparece
@@ -42,7 +42,7 @@ struct LevelArray {
         "…",
         "… onde estou?"
         ]
-        ,speakerArray: [true,true,true,true,false,false,true,false,true,false,true,false,true,false,false,true,false,true,false,true,true,true]
+        ,speakerArray: [true,true,true,false,true,false,true,false,false,true,false,true,false,false,true,false,true,false,true,true,true]
         ,dialogueColor: Color("orange500"))
 
 var level2: Level = Level(title: "2º Círculo: Boa Viagem", bossName: "Cebruthius", bossImage: Image("Cebruthius"), background: Image("Praia"),

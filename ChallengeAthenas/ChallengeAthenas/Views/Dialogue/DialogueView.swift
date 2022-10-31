@@ -19,7 +19,7 @@ class DialoguePosition: ObservableObject {
 
 struct DialogueView: View {
     @State var pauseIsActive = false
-    let levelArray = LevelArray()
+    var levelArray = LevelArray()
     @StateObject var levelNumber = ActualLevel()
     @StateObject var dialoguePosition = DialoguePosition()
     
@@ -28,10 +28,33 @@ struct DialogueView: View {
         ZStack {
             Color.black.ignoresSafeArea()
             
+            
+            ZStack{
+                if dialoguePosition.position == 2 {
+                    Image("bgEmpty1")
+                        .resizable()
+                        .ignoresSafeArea()
+                }
+                
+                else if dialoguePosition.position == 3 {
+                    Image("bgEmpty2")
+                        .resizable()
+                        .ignoresSafeArea()
+                }
+                
+                else {
+                    actualLevel.background
+                        .resizable()
+                        .ignoresSafeArea()
+                }
+            }
+            
             ZStack {
                 
+               
+                
                 //Personagem
-                if dialoguePosition.position > 4  && levelNumber.level == 0 {
+                if dialoguePosition.position > 3  && levelNumber.level == 0 {
                     VStack {
                         Spacer()
                         actualLevel.bossImage
@@ -100,11 +123,7 @@ struct DialogueView: View {
                 if pauseIsActive {
                     PauseMenuSheet(sheetIsActive: $pauseIsActive)
                 }
-            }.background(actualLevel.background
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
-            ).navigationBarBackButtonHidden(true)
+            }.navigationBarBackButtonHidden(true)
         }
     }
 }
