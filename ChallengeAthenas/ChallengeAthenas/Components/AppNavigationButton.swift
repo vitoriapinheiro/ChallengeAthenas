@@ -21,6 +21,7 @@ struct AppNavigationButton: View {
             destination: nextView(),
             label: {
                 Text(title)
+                    .font(.custom("xilosa", size: 22))
                     .bold()
                     .foregroundColor(isEnable ? Color.white : Color(red: 0.50, green: 0.22, blue: 0.00))
                     .frame(width: 300, height: 48)
@@ -41,5 +42,13 @@ struct AppNavigationButton: View {
                     )
             }
         )
+    }
+}
+
+
+
+struct AppNavigationButton_Previews: PreviewProvider {
+    static var previews: some View {
+        AppNavigationButton(title: "teste", nextView: {AnyView(DialogueView())}, isEnable: true, isFill: true, height: 30, width: 100)
     }
 }
