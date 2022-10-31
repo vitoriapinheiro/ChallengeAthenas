@@ -27,6 +27,7 @@
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
 		D43AC4DB290CAC9D00461FF1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */; };
+		D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44064D5291056BC00E21F65 /* LifeBar.swift */; };
 		D4EAE319290729CD00243041 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* MediumSheet.swift */; };
 		D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31A29075FFB00243041 /* PopUpTitle.swift */; };
 		D4EAE31D2907683100243041 /* SmallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31C2907683100243041 /* SmallSheet.swift */; };
@@ -59,6 +60,7 @@
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
 		D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D44064D5291056BC00E21F65 /* LifeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBar.swift; sourceTree = "<group>"; };
 		D4EAE318290729CD00243041 /* MediumSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumSheet.swift; sourceTree = "<group>"; };
 		D4EAE31A29075FFB00243041 /* PopUpTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTitle.swift; sourceTree = "<group>"; };
 		D4EAE31C2907683100243041 /* SmallSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSheet.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				D4EAE31A29075FFB00243041 /* PopUpTitle.swift */,
 				D4EAE31C2907683100243041 /* SmallSheet.swift */,
 				D4EAE318290729CD00243041 /* MediumSheet.swift */,
+				D44064D5291056BC00E21F65 /* LifeBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
+				D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */,
 				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
 				E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */,
 			);
