@@ -4,7 +4,6 @@
 //
 //  Created by Bof on 24/10/22.
 //
-
 import Foundation
 import SwiftUI
 
@@ -26,7 +25,7 @@ struct SmallSheet: View {
                     .foregroundColor(Color.white)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
-                    .font(.custom("SF Pro", size: 20))
+                    .font(.custom("xilosa", size: 20))
                     .frame(width: 214, alignment: .center)
                     .padding()
                 AppButton(
@@ -36,8 +35,11 @@ struct SmallSheet: View {
                     enable: true,
                     isFill: true,
                     height: 48,
-                    width: 300
+                    width: 300,
+                    big: true,
+                    size: 20
                 )
+                
             }
             
         }

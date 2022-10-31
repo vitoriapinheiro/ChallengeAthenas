@@ -26,7 +26,7 @@ struct PauseMenuSheet: View {
                 
                 VStack (spacing: 34) {
                     Text( "PAUSA")
-                        .font(.system(size: 48))
+                        .font(.custom("xilosa", size: 48))
                         .foregroundColor(Color(red: 1.00, green: 0.82, blue: 0.07).opacity(0.8))
                         .frame(alignment: .center)
                     
@@ -36,13 +36,14 @@ struct PauseMenuSheet: View {
                         
                         VStack (alignment: .leading, spacing: 18) {
                             Text("Configurações")
-                                .font(.system(size: 24))
+                                .font(.custom("xilosa", size: 24))
                                 .foregroundColor(Color(red: 1.00, green: 0.82, blue: 0.07))
                                 .frame(alignment: .leading)
                             
                             VStack(alignment: .leading, spacing: 22) {
                                 HStack {
                                     Text("Sons do jogo:")
+                                        .font(.custom("xilosa", size: 18))
                                         .foregroundColor(.white)
                                     
                                     Spacer()
@@ -66,6 +67,7 @@ struct PauseMenuSheet: View {
                                 HStack {
                                     Text("Música:")
                                         .foregroundColor(.white)
+                                        .font(.custom("xilosa", size: 18))
                                     
                                     Spacer()
                                     
@@ -86,6 +88,7 @@ struct PauseMenuSheet: View {
                                 }
                                 HStack {
                                 Text("Aumento de contraste:")
+                                    .font(.custom("xilosa", size: 18))
                                     .foregroundColor(.white)
                                     
                                     Spacer()
@@ -114,30 +117,30 @@ struct PauseMenuSheet: View {
                         VStack (alignment: .center, spacing: 36){
                             VStack{
                                 ZStack{
-                                    Color.red
-                                        .frame(height: 52)
+                                    Image("pausePrimaryButton")
+                                        .padding(.vertical, 16)
                                         .onTapGesture {
                                             sheetIsActive = false
                                         }
                                     
-                                    Text("VOLTAR AO JOGO")
+                                    Text("CONTINUAR")
                                         .foregroundColor(.white)
-                                        .font(.system(size: 20))
+                                        .font(.custom("xilosa", size: 20))
                                 }
                                 
                                 ZStack{
-                                    Color.gray
+                                    Image("pauseSecondaryButton")
                                         .frame(height: 52)
                                     
-                                    Text("REINICIAR")
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 20))
+                                    Text("REINICIAR NÍVEL")
+                                        .foregroundColor(Color("orange700"))
+                                        .font(.custom("xilosa", size: 20))
                                 }
                             }
                             
                             Text("VOLTAR AO MAPA")
                                 .foregroundColor(.white)
-                                .font(.system(size: 20))
+                                .font(.custom("xilosa", size: 20))
                             
                         }
                         
