@@ -56,6 +56,7 @@ struct DialogueView: View {
                     Color(.black).ignoresSafeArea()
                 }
                 
+                //Chico
                 if levelNumber.level == 2 {
                     VStack {
                         Spacer()
