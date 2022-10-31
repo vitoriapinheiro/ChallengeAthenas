@@ -32,6 +32,8 @@
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
 		D43AC4DB290CAC9D00461FF1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */; };
+		D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44064D5291056BC00E21F65 /* LifeBar.swift */; };
+		D4EAE319290729CD00243041 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* MediumSheet.swift */; };
 		D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE31A29075FFB00243041 /* PopUpTitle.swift */; };
 		E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B0F7E290B1D3500E50277 /* CreditsButton.swift */; };
 		E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */ = {isa = PBXBuildFile; fileRef = E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */; };
@@ -67,6 +69,8 @@
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
 		D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D44064D5291056BC00E21F65 /* LifeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBar.swift; sourceTree = "<group>"; };
+		D4EAE318290729CD00243041 /* MediumSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumSheet.swift; sourceTree = "<group>"; };
 		D4EAE31A29075FFB00243041 /* PopUpTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTitle.swift; sourceTree = "<group>"; };
 		E97B0F7E290B1D3500E50277 /* CreditsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsButton.swift; sourceTree = "<group>"; };
 		E99A2E0A290B08CF00175BF8 /* cordel-rustika.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cordel-rustika.otf"; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				E99A2E11290B156900175BF8 /* AppInitalButton.swift */,
 				E97B0F7E290B1D3500E50277 /* CreditsButton.swift */,
 				D4EAE31A29075FFB00243041 /* PopUpTitle.swift */,
+				D44064D5291056BC00E21F65 /* LifeBar.swift */,
 				CA5E4E1D29104AD400ED5106 /* MediumSheet.swift */,
 				CA5E4E1B29104AAE00ED5106 /* SmallSheet.swift */,
 			);
@@ -294,6 +299,7 @@
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CA5E4E1E29104AD400ED5106 /* MediumSheet.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
+				D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */,
 				CA5E4E1C29104AAE00ED5106 /* SmallSheet.swift in Sources */,
 				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
 				E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */,
