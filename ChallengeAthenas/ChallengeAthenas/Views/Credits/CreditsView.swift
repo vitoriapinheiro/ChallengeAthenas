@@ -10,66 +10,15 @@ import SwiftUI
 
 struct CreditsView: View {
     
-    let bottomGradient = Color("bottomGradient")
-    let topGradient = Color("topGradient")
-    
-    var backgroundGradient: LinearGradient?
-    
     let column = [
         GridItem(),
         GridItem()
     ]
     
-    init() {
-        self.backgroundGradient = LinearGradient(
-            colors: [self.bottomGradient, self.topGradient],
-            startPoint: .bottom, endPoint: .top)
-    }
-    
     var body: some View {
         ZStack {
-            backgroundGradient
-                .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                Spacer()
-                    .frame(height: 29)
-                HStack {
-                    Spacer()
-                    Image("luaPreta")
-                        .aspectRatio(contentMode: .fit)
-                        .rotationEffect(Angle(degrees: 2))
-                    Spacer()
-                        .frame(width: 8)
-                }
-                Spacer()
-            }
-            .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Image("cactos")
-                        .aspectRatio(contentMode: .fit)
-                    Spacer()
-                        .frame(width: 290)
-                }
-            }
-            .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Image("fogueira")
-                        .aspectRatio(contentMode: .fit)
-                    Spacer()
-                        .frame(width: 0)
-                }
-            }
-            .edgesIgnoringSafeArea(.all)
-            .offset(x: 24, y: 56)
+            CreditsBackgroundView()
             
             HStack {
                 Spacer()
@@ -87,24 +36,18 @@ struct CreditsView: View {
                                 ForEach(0..<TeamArray.teamMembers.count) { index in
                                     
                                     VStack {
-                                        
-                                        HStack {
-                                            Text(TeamArray.teamMembers[index].member)
-                                                .font(.custom("xilosa", size: 20))
-                                                .foregroundColor(.white)
-                                            
-                                            Spacer()
-                                        }
-                                        
+                                        GridLabel(
+                                            label: TeamArray.teamMembers[index].member,
+                                            labelSize: 20
+                                        )
                                         Spacer()
                                     }
                                     
-                                    HStack {
-                                        Text(TeamArray.teamMembers[index].role)
-                                            .font(.custom("xilosa", size: 16))
-                                            .foregroundColor(.white)
-                                        Spacer()
-                                    }
+                                    GridLabel(
+                                        label: TeamArray.teamMembers[index].role,
+                                        labelSize: 16
+                                    )
+                                    
                                 }
                             }
                         }
@@ -120,7 +63,6 @@ struct CreditsView: View {
                 
                 Spacer()
             }
-            
         }
     }
 }
