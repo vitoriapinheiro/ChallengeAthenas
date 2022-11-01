@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFoundation
+import MediaPlayer
 
 class MusicPlayer {
     static let shared = MusicPlayer()
@@ -31,5 +32,18 @@ class MusicPlayer {
         guard let audioPlayer = audioPlayer else { return }
         audioPlayer.stop()
     }
+    
+    func upDownSound() {
+        
+    }
+    
+    static func setVolume(_ volume: Float) -> Void {
+            let volumeView = MPVolumeView()
+            let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+                slider?.value = volume
+            }
+        }
 
 }
