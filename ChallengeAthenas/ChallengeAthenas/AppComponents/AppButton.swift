@@ -13,21 +13,45 @@ struct AppButton: View {
     let action: () -> Void
     let enable: Bool
     let isFill: Bool
+    let height: CGFloat
+    let width: CGFloat
+    let big: Bool
+    let size: CGFloat
     
     var body: some View {
         Button(action: {
-            if enable {
-                action()
-            }
+            action()
         }, label: {
             Text(title)
+                .font(.custom(big ? "xilosa":"xilo-sans", size: size))
                 .bold()
-                .foregroundColor(isFill ? Color.white : Color.pink)
-                .frame(width: 300, height: 48)
-                .background(isFill ? (enable ? Color.pink: Color.gray) : Color.white.opacity(0))
-                .cornerRadius(16)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
+                .foregroundColor(enable ? Color.white : Color(red: 0.50, green: 0.22, blue: 0.00))
+                .frame(width: width, height: height)
+                .font(.custom("xilosa", size: 20))
+                .background(
+                    isFill ?
+                    (enable ?
+                     Image("botao")
+                        .resizable()
+                        .opacity(100)
+                     :
+                    Image("botaoSecundario")
+                        .resizable()
+                        .opacity(100)
+                     )
+                    :
+                    Image("botao")
+                        .resizable()
+                        .opacity(0)
+                )
         }
         )
     }
 }
+
+struct AppButton_Previews: PreviewProvider {
+    static var previews: some View {
+        AppButton(title: "Botão", action: {}, enable: true, isFill: true, height: 34, width: 102, big: false, size: 16)
+    }
+}
+

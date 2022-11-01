@@ -42,6 +42,7 @@ struct ConversationAndButtonsView: View {
                 ZStack {
                     actualLevel.dialogueColor
                     Text(speaker)
+                        .font(.custom("xilosa", size: 24))
                         .foregroundColor(.white)
                         .offset(y: -2)
                     
@@ -66,6 +67,7 @@ struct ConversationAndButtonsView: View {
                             Spacer().frame(width: 16)
                             
                             Text (actualLevel.dialogueArray[dialoguePosition.position])
+                                .font(.bold(.body)())
                                 .foregroundColor(.white)
                             
                             Spacer().frame(width: 16)
@@ -96,42 +98,20 @@ struct ConversationAndButtonsView: View {
             HStack {
                 Spacer()
                     .frame(width: 16)
-                ZStack{
-                    Image("botao")
-                        .resizable()
-                        .frame(width: 102, height: 34)
-                    Text("pular tudo")
-                        .foregroundColor(.white)
-                        .onTapGesture {
-                            dialoguePosition.position = LevelArray().levels[levelNumber.level].dialogueArray.count - 1
-                        }
-                }
-                
+                AppButton(title: "pular tudo", action: {
+                    dialoguePosition.position = LevelArray().levels[levelNumber.level].dialogueArray.count - 1
+                }, enable: true, isFill: true, height: 34, width: 102, big: false, size: 16)
                 Spacer()
                 
                 HStack(spacing: 16) {
                     //Voltar
-                    ZStack{
-                        Image("botao")
-                            .resizable()
-                            .frame(width: 84)
-                            .onTapGesture {
-                                if dialoguePosition.position > 0 {
-                                    dialoguePosition.position -= 1
-                                }
-                            }
-                        Text("voltar")
-                            .foregroundColor(.white)
-                    }
+                    AppButton(title: "voltar", action: {
+                        if dialoguePosition.position > 0 {
+                            dialoguePosition.position -= 1
+                        }
+                    }, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
                     
-                    ZStack{
-                        Image("botao")
-                            .resizable()
-                            .frame(width: 84)
-                        
-                        Text("auto")
-                            .foregroundColor(.white)
-                    }
+                    AppButton(title: "auto", action: {}, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
                     
                 }.frame(height: 34)
                 

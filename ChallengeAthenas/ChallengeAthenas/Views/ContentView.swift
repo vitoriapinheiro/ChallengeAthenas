@@ -3,7 +3,7 @@
 //  ChallengeAthenas
 //
 //  Created by vivi on 14/10/22.
-//
+//tirei ds.store
 
 import SwiftUI
 
@@ -12,7 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            MenuView(level: $level)
+//            MenuView(level: $level)
+            Lifebar()
         }
     }
 }
