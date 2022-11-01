@@ -20,7 +20,7 @@ struct SmallSheet: View {
                 }
                 .ignoresSafeArea()
             VStack {
-                PopUpTitle(text: title)
+                PopUpTitle(text: title, colorPick: false)
                 Text(details)
                     .foregroundColor(Color.white)
                     .fontWeight(.semibold)

@@ -10,10 +10,11 @@ import SwiftUI
 
 struct PopUpTitle: View {
     let text: String
+    var colorPick: Bool // 0 if yellow, 1 if red
     
     var body: some View {
-        Text("\(text)")
-            .foregroundColor(Color.yellow)
+        Text("\(text.uppercased())")
+            .foregroundColor(colorPick ? Color.red : Color.yellow)
             .fontWeight(.semibold)
             .multilineTextAlignment(.center)
             .font(.custom("xilosa", size: 48))
@@ -23,6 +24,6 @@ struct PopUpTitle: View {
 
 struct PopUpTitle_Previews: PreviewProvider {
     static var previews: some View {
-        PopUpTitle(text: "teste")
+        PopUpTitle(text: "teste", colorPick: true)
     }
 }
