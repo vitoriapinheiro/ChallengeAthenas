@@ -1,6 +1,6 @@
 # ***Projeto Game: HellCife***
  
-![Banner Dono da Lua](https://imgur.com/a/1Lm97ki)
+![https://imgur.com/a/1Lm97ki](https://imgur.com/a/x0ljIQ7)
 
 <p align="center">
     <img src="https://img.shields.io/github/issues-pr-raw/vitoriapinheiro/ChallengeAthenas">
@@ -42,21 +42,6 @@ Fizemos uma divisão em branches para cada feature, hotfix, bugfix, ou release q
 mantendo a branch main protegida de `git push` sem revisões dos outros integrantes. O repositório também
 conta com uma pasta `.github` que contém um template para a abertura de pull request para incentivar que
 o integrante escreva o que ele alterou, adicionou ou removeu em seus commits.
- 
-*Estruturação de Código:* </br>
- 
-*Estruturação de Pastas e arquivos:* </br>
-
- 
-*Ferramentas & Bibliotecas:* </br>
-
- 
-*Divisão básica do trabalho:* </br>
-
- 
-*Conceitos apresentados na disciplina que foram aplicados:* </br>
-
- 
 
 ---
 <p align="center">
