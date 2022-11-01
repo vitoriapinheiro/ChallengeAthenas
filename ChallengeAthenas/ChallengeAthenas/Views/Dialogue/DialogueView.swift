@@ -18,6 +18,7 @@ class DialoguePosition: ObservableObject {
 
 
 struct DialogueView: View {
+    @Binding var level: Int
     @State var pauseIsActive = false
     var levelArray = LevelArray()
     @StateObject var levelNumber = ActualLevel()
@@ -30,13 +31,13 @@ struct DialogueView: View {
             
             
             ZStack{
-                if dialoguePosition.position == 2 && levelNumber.level == 0{
+                if dialoguePosition.position == 1 && levelNumber.level == 0{
                     Image("bgEmpty1")
                         .resizable()
                         .ignoresSafeArea()
                 }
                 
-                else if dialoguePosition.position == 3 && levelNumber.level == 0{
+                else if dialoguePosition.position == 2 && levelNumber.level == 0{
                     Image("bgEmpty2")
                         .resizable()
                         .ignoresSafeArea()
@@ -54,7 +55,8 @@ struct DialogueView: View {
                
                 
                 //Personagem
-                if dialoguePosition.position > 3  && levelNumber.level == 0 {
+                //Mofia
+                if dialoguePosition.position > 2  && levelNumber.level == 0 {
                     VStack {
                         Spacer()
                         actualLevel.bossImage
@@ -64,6 +66,7 @@ struct DialogueView: View {
                     }.ignoresSafeArea()
                 }
                 
+                //Cebrutius
                 if dialoguePosition.position > 0  && levelNumber.level == 1 {
                     VStack {
                         Spacer()
@@ -75,7 +78,7 @@ struct DialogueView: View {
                     }
                 }
                 
-                // Tela preta
+                // Tela preta de mofia
                 if dialoguePosition.position >= 15 && levelNumber.level == 0 {
                     Color(.black).ignoresSafeArea()
                 }
@@ -122,7 +125,7 @@ struct DialogueView: View {
                 
                 //PopUp
                 if pauseIsActive {
-                    PauseMenuSheet(sheetIsActive: $pauseIsActive)
+                    PauseMenuSheet(sheetIsActive: $pauseIsActive, level: $level, dialoguePosition: dialoguePosition, levelNumber: levelNumber)
                 }
             }.navigationBarBackButtonHidden(true)
         }
@@ -131,6 +134,6 @@ struct DialogueView: View {
 
 struct DialogueView_Previews: PreviewProvider {
     static var previews: some View {
-        DialogueView()
+        DialogueView(level: ContentView().$level)
     }
 }
