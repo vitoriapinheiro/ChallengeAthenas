@@ -15,7 +15,8 @@ struct PauseMenuSheet: View {
     @State private var sound = 50.0
     @State private var music = 50.0
     @State private var isEditing = false
-    
+    @State private var soundLevel: Float = 0.5
+    @State private var musicLevel: Float = 0.5
     
     var body: some View {
         ZStack {
@@ -62,9 +63,9 @@ struct PauseMenuSheet: View {
                                     Spacer()
                                     
                                     //Slider de som
-                                    Slider(value: $sound, in: 0...100,onEditingChanged: { editing in
-                                        isEditing = editing
-                                    }).frame(width: 124)
+                                    Slider(value: $soundLevel, in: 0...1,step: 0.0625, onEditingChanged: { data in
+                                        MusicPlayer.setVolume(self.soundLevel)
+                                            }).frame(width: 124)
                                 }
                                 
                                 HStack {
@@ -75,9 +76,9 @@ struct PauseMenuSheet: View {
                                     Spacer()
                                     
                                     //Slider de Música
-                                    Slider(value: $music, in: 0...100,onEditingChanged: { editing in
-                                        isEditing = editing
-                                    }).frame(width: 124)
+                                    Slider(value: $musicLevel, in: 0...1,step: 0.0625, onEditingChanged: { data in
+                                        MusicPlayer.setVolume(self.musicLevel)
+                                            }).frame(width: 124)
                                 }
                                 HStack {
                                     Text("Aumento de contraste:")
@@ -110,7 +111,9 @@ struct PauseMenuSheet: View {
                         VStack (alignment: .center, spacing: 36){
                             VStack{
                                 
-                                AppButton(title: "CONTINUAR", action: {sheetIsActive = false}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
+//                                AppButton(title: "CONTINUAR", action: {sheetIsActive = false}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
+                                
+                                AppButton(title: "CONTINUAR", action: {MusicPlayer().startBackgroundMusic(backgroundMusicFileName: "Ataque do Carangueijo")}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
                                 
                                 AppButton(title: "REINICIAR DIÁLOGO", action: {dialoguePosition.position = 0
                                     sheetIsActive = false
