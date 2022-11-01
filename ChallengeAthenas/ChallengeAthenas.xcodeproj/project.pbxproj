@@ -26,6 +26,9 @@
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
+		D42F1F9929116A4F0048914B /* Ataque do Carangueijo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D42F1F9729116A4E0048914B /* Ataque do Carangueijo.m4a */; };
+		D42F1F9A29116A4F0048914B /* O Demônio dos Mares.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D42F1F9829116A4F0048914B /* O Demônio dos Mares.m4a */; };
+		D42F1F9C29116A6E0048914B /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1F9B29116A6E0048914B /* MusicPlayer.swift */; };
 		D43AC4DB290CAC9D00461FF1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */; };
 		D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44064D5291056BC00E21F65 /* LifeBar.swift */; };
 		D4EAE319290729CD00243041 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EAE318290729CD00243041 /* MediumSheet.swift */; };
@@ -59,6 +62,9 @@
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
+		D42F1F9729116A4E0048914B /* Ataque do Carangueijo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ataque do Carangueijo.m4a"; sourceTree = "<group>"; };
+		D42F1F9829116A4F0048914B /* O Demônio dos Mares.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "O Demônio dos Mares.m4a"; sourceTree = "<group>"; };
+		D42F1F9B29116A6E0048914B /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		D43AC4DA290CAC9D00461FF1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D44064D5291056BC00E21F65 /* LifeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeBar.swift; sourceTree = "<group>"; };
 		D4EAE318290729CD00243041 /* MediumSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumSheet.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 		44C365BD28F98B2E007B9868 /* ChallengeAthenas */ = {
 			isa = PBXGroup;
 			children = (
+				D42F1F9729116A4E0048914B /* Ataque do Carangueijo.m4a */,
+				D42F1F9829116A4F0048914B /* O Demônio dos Mares.m4a */,
 				E99A2E0D290B096700175BF8 /* Info.plist */,
 				E99A2E09290B089200175BF8 /* Fonts */,
 				44C365D228F99A61007B9868 /* Components */,
@@ -109,6 +117,7 @@
 				44C365BE28F98B2E007B9868 /* ChallengeAthenasApp.swift */,
 				44C365C228F98B30007B9868 /* Assets.xcassets */,
 				44C365C428F98B30007B9868 /* Preview Content */,
+				D42F1F9B29116A6E0048914B /* MusicPlayer.swift */,
 			);
 			path = ChallengeAthenas;
 			sourceTree = "<group>";
@@ -251,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C365C628F98B30007B9868 /* Preview Assets.xcassets in Resources */,
+				D42F1F9929116A4F0048914B /* Ataque do Carangueijo.m4a in Resources */,
 				44C365C328F98B30007B9868 /* Assets.xcassets in Resources */,
 				E99A2E10290B0F3700175BF8 /* xilosa.ttf in Resources */,
+				D42F1F9A29116A4F0048914B /* O Demônio dos Mares.m4a in Resources */,
 				E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */,
 				E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */,
 			);
@@ -283,6 +294,7 @@
 				44C365D128F99A55007B9868 /* AppButton.swift in Sources */,
 				A3D0AAEE290B255F004BCAFB /* CreditsView.swift in Sources */,
 				CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */,
+				D42F1F9C29116A6E0048914B /* MusicPlayer.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
