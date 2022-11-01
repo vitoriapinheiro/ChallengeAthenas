@@ -49,6 +49,6 @@ struct AppNavigationButton: View {
 
 struct AppNavigationButton_Previews: PreviewProvider {
     static var previews: some View {
-        AppNavigationButton(title: "teste", nextView: {AnyView(DialogueView())}, isEnable: true, isFill: true, height: 30, width: 100)
+        AppNavigationButton(title: "teste", nextView: {AnyView(DialogueView(level: ContentView().$level))}, isEnable: true, isFill: true, height: 30, width: 100)
     }
 }

@@ -52,7 +52,7 @@ struct MenuView: View {
                     
                     AppInitialButton(
                         title: "CONTINUAR",
-                        nextView: {AnyView(DialogueView())},
+                        nextView: {AnyView(DialogueView(level: $level))},
                         isSecondary: false
                     )
                     
@@ -60,7 +60,7 @@ struct MenuView: View {
                         
                         AppInitialButton(
                             title: "NOVO JOGO",
-                            nextView: {AnyView(DialogueView())},
+                            nextView: {AnyView(DialogueView(level: $level))},
                             isSecondary: true
                         )
                         
