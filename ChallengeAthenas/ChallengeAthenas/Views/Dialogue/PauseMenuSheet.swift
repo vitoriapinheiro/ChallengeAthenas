@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct PauseMenuSheet: View {
     @Binding var sheetIsActive: Bool
@@ -64,7 +65,7 @@ struct PauseMenuSheet: View {
                                     
                                     //Slider de som
                                     Slider(value: $soundLevel, in: 0...1,step: 0.0625, onEditingChanged: { data in
-                                        MusicPlayer.setVolume(self.soundLevel)
+                                        //MusicPlayer.setVolume(self.soundLevel)
                                             }).frame(width: 124)
                                 }
                                 
@@ -77,7 +78,7 @@ struct PauseMenuSheet: View {
                                     
                                     //Slider de Música
                                     Slider(value: $musicLevel, in: 0...1,step: 0.0625, onEditingChanged: { data in
-                                        MusicPlayer.setVolume(self.musicLevel)
+                                        MusicPlayer.shared.setVolume(self.musicLevel)
                                             }).frame(width: 124)
                                 }
                                 HStack {
@@ -111,9 +112,10 @@ struct PauseMenuSheet: View {
                         VStack (alignment: .center, spacing: 36){
                             VStack{
                                 
-//                                AppButton(title: "CONTINUAR", action: {sheetIsActive = false}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
-                                
-                                AppButton(title: "CONTINUAR", action: {MusicPlayer().startBackgroundMusic(backgroundMusicFileName: "Ataque do Carangueijo")}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
+                                AppButton(title: "CONTINUAR", action: {sheetIsActive = false}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
+
+                                //Tocar musica
+                                //AppButton(title: "CONTINUAR", action: {MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Ataque do Carangueijo")}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
                                 
                                 AppButton(title: "REINICIAR DIÁLOGO", action: {dialoguePosition.position = 0
                                     sheetIsActive = false
