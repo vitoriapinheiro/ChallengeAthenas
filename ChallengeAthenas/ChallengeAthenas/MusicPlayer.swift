@@ -14,8 +14,8 @@ class MusicPlayer: ObservableObject {
     var audioPlayer: AVAudioPlayer!
     private var songPlaying: String = ""
     @Published private var playing = false
-
-
+    
+    
     func startBackgroundMusic(backgroundMusicFileName: String) {
         if let bundle = Bundle.main.path(forResource: backgroundMusicFileName, ofType: "m4a") {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
@@ -35,13 +35,13 @@ class MusicPlayer: ObservableObject {
     }
     
     func playPause() {
-            if playing {
-                audioPlayer.pause()
-            } else {
-                audioPlayer.play()
-            }
-            playing.toggle()
+        if playing {
+            audioPlayer.pause()
+        } else {
+            audioPlayer.play()
         }
+        playing.toggle()
+    }
     
     func stopBackgroundMusic() {
         guard let audioPlayer = audioPlayer else { return }
@@ -49,17 +49,17 @@ class MusicPlayer: ObservableObject {
         audioPlayer.stop()
     }
     
-    func upDownSound() {
+    func setVolume(_ volume: Float) -> Void {
+        let volumeView = MPVolumeView()
+        let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+            slider?.value = volume
+        }
+        
+        if audioPlayer != nil {
+            audioPlayer.volume = volume
+        }
     }
     
-    static func setVolume(_ volume: Float) -> Void {
-            let volumeView = MPVolumeView()
-            let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
-
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
-                slider?.value = volume
-            }
-        }
-
 }
