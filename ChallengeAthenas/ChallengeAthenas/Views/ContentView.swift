@@ -4,7 +4,6 @@
 //
 //  Created by vivi on 14/10/22.
 //tirei ds.store
-
 import SwiftUI
 
 struct ContentView: View {
@@ -13,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             MenuView(level: $level)
-            //conflito
+//            CounterView()
         }
     }
 }
