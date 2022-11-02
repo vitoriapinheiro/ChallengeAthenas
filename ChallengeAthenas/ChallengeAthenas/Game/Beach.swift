@@ -156,7 +156,7 @@ struct BeachView: View {
                     .padding(.top, 60)
                 
                 if pauseIsActive {
-                    PauseMenuSheet(sheetIsActive: $pauseIsActive)
+                    PauseMenuSheet(sheetIsActive: $pauseIsActive, level: ContentView().$level,dialoguePosition: DialogueView(level: ContentView().$level).dialoguePosition, levelNumber: DialogueView(level: ContentView().$level).levelNumber)
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
