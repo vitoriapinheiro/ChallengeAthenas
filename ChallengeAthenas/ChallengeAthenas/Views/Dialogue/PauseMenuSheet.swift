@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct PauseMenuSheet: View {
     @Binding var sheetIsActive: Bool
-    @State private var phase = 0.0
-    @State var soundColor: Array = [Color.yellow,Color.white,Color.white,Color.white,Color.white]
-    @State var musicColor: Array = [Color.yellow,Color.white,Color.white,Color.white,Color.white]
+    @Binding var level: Int
+    @ObservedObject var dialoguePosition: DialoguePosition
+    @ObservedObject var levelNumber: ActualLevel
+    @State private var sound = 50.0
+    @State private var music = 50.0
+    @State private var isEditing = false
+    @State private var soundLevel: Float = 0.5
+    @State private var musicLevel: Float = 0.5
     
     var body: some View {
         ZStack {
@@ -21,8 +27,17 @@ struct PauseMenuSheet: View {
                 }
             ZStack {
                 
-                Color(red: 0.15, green: 0.13, blue: 0.11)
-                    .frame(width: 351, height: 575)
+                VStack{
+                    Spacer().frame(height: 134)
+                    HStack{
+                        Spacer().frame(width: 20)
+                        Image("pauseSheet")
+                            .resizable()
+                        Spacer().frame(width: 20)
+                    }
+                    Spacer().frame(height: 134)
+                }
+    
                 
                 VStack (spacing: 34) {
                     Text( "PAUSA")
@@ -48,20 +63,10 @@ struct PauseMenuSheet: View {
                                     
                                     Spacer()
                                     
-                                    HStack (alignment: .lastTextBaseline, spacing: 11) {
-                                        ForEach(0..<5) { index in
-                                            Rectangle()
-                                                .frame(width: 16, height: 16, alignment: .trailing)
-                                                .foregroundColor(soundColor[index])
-                                                .onTapGesture {
-                                                    soundColor = [Color.yellow,Color.white,Color.white,Color.white,Color.white]
-                                                    for i in 0...index {
-                                                        soundColor[i] = Color.yellow
-                                                    }
-                                                    
-                                                }
-                                        }
-                                    }
+                                    //Slider de som
+                                    Slider(value: $soundLevel, in: 0...1,step: 0.0625, onEditingChanged: { data in
+                                        //MusicPlayer.setVolume(self.soundLevel)
+                                            }).frame(width: 124)
                                 }
                                 
                                 HStack {
@@ -71,33 +76,23 @@ struct PauseMenuSheet: View {
                                     
                                     Spacer()
                                     
-                                    HStack (alignment: .lastTextBaseline, spacing: 11) {
-                                        ForEach(0..<5) { index in
-                                            Rectangle()
-                                                .frame(width: 16, height: 16, alignment: .trailing)
-                                                .foregroundColor(musicColor[index])
-                                                .onTapGesture {
-                                                    musicColor = [Color.yellow,Color.white,Color.white,Color.white,Color.white]
-                                                    for i in 0...index {
-                                                        musicColor[i] = Color.yellow
-                                                    }
-                                                    
-                                                }
-                                        }
-                                    }
+                                    //Slider de Música
+                                    Slider(value: $musicLevel, in: 0...1,step: 0.0625, onEditingChanged: { data in
+                                        MusicPlayer.shared.setVolume(self.musicLevel)
+                                            }).frame(width: 124)
                                 }
                                 HStack {
-                                Text("Aumento de contraste:")
-                                    .font(.custom("xilosa", size: 18))
-                                    .foregroundColor(.white)
+                                    Text("Aumento de contraste:")
+                                        .font(.custom("xilosa", size: 18))
+                                        .foregroundColor(.white)
                                     
                                     Spacer()
                                     
                                     ZStack {
-                                    Rectangle()
-                                        .strokeBorder()
-                                        .frame(width: 85, height: 28, alignment: .trailing)
-                                        .foregroundColor(.white)
+                                        Rectangle()
+                                            .strokeBorder()
+                                            .frame(width: 85, height: 28, alignment: .trailing)
+                                            .foregroundColor(.white)
                                         
                                         Text("Off")
                                             .foregroundColor(.white)
@@ -116,31 +111,19 @@ struct PauseMenuSheet: View {
                             .frame(width: 42)
                         VStack (alignment: .center, spacing: 36){
                             VStack{
-                                ZStack{
-                                    Image("pausePrimaryButton")
-                                        .padding(.vertical, 16)
-                                        .onTapGesture {
-                                            sheetIsActive = false
-                                        }
-                                    
-                                    Text("CONTINUAR")
-                                        .foregroundColor(.white)
-                                        .font(.custom("xilosa", size: 20))
-                                }
                                 
-                                ZStack{
-                                    Image("pauseSecondaryButton")
-                                        .frame(height: 52)
-                                    
-                                    Text("REINICIAR NÍVEL")
-                                        .foregroundColor(Color("orange700"))
-                                        .font(.custom("xilosa", size: 20))
-                                }
+                                AppButton(title: "CONTINUAR", action: {sheetIsActive = false}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
+
+                                //Tocar musica
+                                //AppButton(title: "CONTINUAR", action: {MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Ataque do Carangueijo")}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20).padding(.vertical, 16)
+                                
+                                AppButton(title: "REINICIAR DIÁLOGO", action: {dialoguePosition.position = 0
+                                    sheetIsActive = false
+                                }, enable: false, isFill: true, height: 55, width: 267, big: true, size: 20)
                             }
                             
-                            Text("VOLTAR AO MAPA")
-                                .foregroundColor(.white)
-                                .font(.custom("xilosa", size: 20))
+                            
+                            AppNavigationButton(title: "VOLTAR AO MAPA", nextView: {AnyView(MapView(level: ContentView().$level))}, isEnable: true, isFill: false, height: 24, width: 148)
                             
                         }
                         
@@ -151,23 +134,16 @@ struct PauseMenuSheet: View {
                     
                 }.frame(width: 351)
                 
-                Rectangle()
-                    .strokeBorder(style: StrokeStyle(lineWidth: 8, dash: [20], dashPhase: phase))
-                    .foregroundColor(Color(red: 1.00, green: 0.82, blue: 0.07).opacity(0.8))
-                    .frame(width: 351, height: 575)
-                                    .onAppear {
-                                        withAnimation(.linear.repeatForever(autoreverses: false)) {
-                                            phase -= 40
-                                        }
-                                    }
+                //                Rectangle()
+                //                    .strokeBorder(style: StrokeStyle(lineWidth: 8, dash: [20], dashPhase: phase))
+                //                    .foregroundColor(Color(red: 1.00, green: 0.82, blue: 0.07).opacity(0.8))
+                //                    .frame(width: 351, height: 575)
+                //                                    .onAppear {
+                //                                        withAnimation(.linear.repeatForever(autoreverses: false)) {
+                //                                            phase -= 40
+                //                                        }
+                //                                    }
             }
         }.ignoresSafeArea()
-    }
-}
-
-struct PauseMenuSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        PauseMenuSheet(sheetIsActive: DialogueView().$pauseIsActive)
-            .previewDevice("iPhone 12")
     }
 }
