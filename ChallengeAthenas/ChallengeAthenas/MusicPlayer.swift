@@ -8,12 +8,15 @@
 import Foundation
 import AVFoundation
 import MediaPlayer
+import SwiftUI
 
 class MusicPlayer: ObservableObject {
     static let shared = MusicPlayer()
     var audioPlayer: AVAudioPlayer!
     private var songPlaying: String = ""
+    
     @Published private var playing = false
+    @State var errorOccurred = false
     
     
     func startBackgroundMusic(backgroundMusicFileName: String) {
@@ -21,13 +24,19 @@ class MusicPlayer: ObservableObject {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)
-                guard let audioPlayer = audioPlayer else { return }
+                guard let audioPlayer = audioPlayer else {
+                    errorOccurred = true
+                    ErrorView(error: $errorOccurred)
+                    return
+                }
                 audioPlayer.numberOfLoops = -1
                 audioPlayer.prepareToPlay()
                 audioPlayer.play()
                 songPlaying = backgroundMusicFileName
                 playing = true
             } catch {
+                errorOccurred = true
+                ErrorView(error: $errorOccurred)
                 print(error)
                 playing = false
             }

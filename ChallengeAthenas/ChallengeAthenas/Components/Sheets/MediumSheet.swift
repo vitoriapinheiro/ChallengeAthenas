@@ -21,7 +21,7 @@ struct MediumSheet: View {
                                 }
                 .ignoresSafeArea()
             VStack {
-                PopUpTitle(text: title)
+                PopUpTitle(text: title, colorPick: false)
                 Image(imageName)
                     .fixedSize()
                 Text(details)
