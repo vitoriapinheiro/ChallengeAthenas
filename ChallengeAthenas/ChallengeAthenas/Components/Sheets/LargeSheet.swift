@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 struct LargeSheet: View {
+    // usada por game over & sheet de aviso qnd aperta novo jogo qnd a pessoa ja tem um pra continuar
     @Binding var showPopUp: Bool
+    
     var imageName: String
     var title: String
     var details: String
