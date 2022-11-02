@@ -36,9 +36,7 @@ struct MapView: View {
                 }
                 Spacer()
             }
-            Button(action: {
-                print("0")
-            }) {
+            NavigationLink(destination: BeachView()) {
                 Text("1")
                     .font(.custom("xilosa", size: 32))
                     .frame(width:44, height:44)
