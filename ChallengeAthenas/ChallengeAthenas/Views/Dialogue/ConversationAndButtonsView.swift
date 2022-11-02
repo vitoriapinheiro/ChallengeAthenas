@@ -13,6 +13,8 @@ struct ConversationAndButtonsView: View {
     @ObservedObject var dialoguePosition: DialoguePosition
     @ObservedObject var levelNumber: ActualLevel
     var speaker: String = ""
+    let autoTimer = Timer.publish(every: 7, on: .main, in: .common).autoconnect()
+    @State var autoBool = false
     
     init(observedDialogue: DialoguePosition, observedLevel: ActualLevel){
         self.dialoguePosition = observedDialogue
@@ -20,13 +22,13 @@ struct ConversationAndButtonsView: View {
         self.speakerChanger()
     }
     
-        private mutating func speakerChanger(){
-            if levelArray.levels[levelNumber.level].speakerArray[dialoguePosition.position] {
-                speaker = "Eu"
-            }else {
-                speaker = levelArray.levels[levelNumber.level].bossName
-            }
+    private mutating func speakerChanger(){
+        if levelArray.levels[levelNumber.level].speakerArray[dialoguePosition.position] {
+            speaker = "Eu"
+        }else {
+            speaker = levelArray.levels[levelNumber.level].bossName
         }
+    }
     
     var body: some View {
         let actualLevel = levelArray.levels[levelNumber.level]
@@ -69,11 +71,17 @@ struct ConversationAndButtonsView: View {
                             Text (actualLevel.dialogueArray[dialoguePosition.position])
                                 .font(.bold(.body)())
                                 .foregroundColor(.white)
+                                .onReceive(autoTimer) { time in
+                                    if autoBool {
+                                        if dialoguePosition.position < LevelArray().levels[levelNumber.level].dialogueArray.count - 1 {
+                                            dialoguePosition.position += 1
+                                        }
+                                    }
+                                }
                             
                             Spacer().frame(width: 16)
                             Spacer()
                         }
-                        
                         Spacer()
                     }
                     
@@ -111,7 +119,7 @@ struct ConversationAndButtonsView: View {
                         }
                     }, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
                     
-                    AppButton(title: "auto", action: {}, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
+                    AppButton(title: "auto", action: autoBool ? {autoBool = false} : {autoBool = true}, enable: true, isFill: true, height: 34, width: 84, big: false, size: 16)
                     
                 }.frame(height: 34)
                 
