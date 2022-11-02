@@ -122,6 +122,7 @@
 		449F39F6290FF72000FC8A6B /* GameComponents */ = {
 			isa = PBXGroup;
 			children = (
+				44F976FB2912E2DB003C69B9 /* Haptics.swift */,
 				449F39F7290FF7FC00FC8A6B /* Pixel.swift */,
 				449F39F9290FF9BE00FC8A6B /* Vehicle.swift */,
 				449F39FB290FFE7200FC8A6B /* Obstacle.swift */,
@@ -148,7 +149,6 @@
 		44C365BD28F98B2E007B9868 /* ChallengeAthenas */ = {
 			isa = PBXGroup;
 			children = (
-				44F976FB2912E2DB003C69B9 /* Haptics.swift */,
 				44F976FA291180D1003C69B9 /* Songs */,
 				449F39F6290FF72000FC8A6B /* GameComponents */,
 				445819EB290C219500E30737 /* Game */,

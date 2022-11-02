@@ -192,6 +192,7 @@ struct BeachView: View {
                 self.crossSize += 0.85
             }
         } else {
+            HapticManager.instance.impact(style: .soft)
             self.points -= 10
             self.crossPosition.x = 200
             self.crossPosition.y = 300
@@ -207,6 +208,7 @@ struct BeachView: View {
                 self.hatSize += 0.8
             }
         } else {
+            HapticManager.instance.impact(style: .light)
             self.points -= 10
             self.hatPosition.x = 200
             self.hatPosition.y = 300
@@ -221,6 +223,7 @@ struct BeachView: View {
                 self.starSize += 0.8
             }
         } else {
+            HapticManager.instance.impact(style: .light)
             self.points -= 10
             self.starPosition.x = 200
             self.starPosition.y = 300
@@ -235,6 +238,7 @@ struct BeachView: View {
                 self.fishboneSize += 0.85
             }
         } else {
+            HapticManager.instance.impact(style: .soft)
             self.points -= 10
             self.fishbonePosition.x = 200
             self.fishbonePosition.y = 300
