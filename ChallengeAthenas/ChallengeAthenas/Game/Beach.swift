@@ -15,20 +15,26 @@ struct BeachView: View {
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var pauseIsActive = false
     
+    @State var points = 304.0
+    
     @State var screenWidth = CGFloat(0)
     @State var screenHeight = CGFloat(0)
     
-    @State var crossPosition = CGPoint(x: 200, y: 300)
+    @State var crossPosition = CGPoint(x: UIScreen.main.bounds.height/2, y: 300)
     @State var crossSize = CGFloat(1)
     
-    @State var hatPosition = CGPoint(x: 200, y: 300)
+    @State var hatPosition = CGPoint(x: UIScreen.main.bounds.height/2, y: 300)
     @State var hatSize = CGFloat(1)
     
-    @State var starPosition = CGPoint(x: 200, y: 300)
+    @State var starPosition = CGPoint(x: UIScreen.main.bounds.height/2, y: 300)
     @State var starSize = CGFloat(1)
     
-    @State var fishbonePosition = CGPoint(x: 200, y: 300)
+    @State var fishbonePosition = CGPoint(x: UIScreen.main.bounds.height/2, y: 300)
     @State var fishboneSize = CGFloat(1)
+    
+    let teste: Image = {
+        return Image("CebruthiusFace")
+    }()
     
     var body: some View {
         GeometryReader{ geo in
@@ -43,7 +49,7 @@ struct BeachView: View {
                         .bold()
                     Spacer()
                     VStack(spacing: 0){
-                        Image("CebruthiusFace")
+                        teste
                             .resizable()
                             .zIndex(1)
                             .aspectRatio(contentMode: .fill)
@@ -85,9 +91,10 @@ struct BeachView: View {
                                             print("Fishbone")
                                         }
                                 )
-                        }.padding(.bottom, 96)
+                        }
                     }
                     .frame(width: 366, height: 555)
+                    Lifebar(status: $points)
                 }
                 .padding(.top, 60)
                 
@@ -106,17 +113,27 @@ struct BeachView: View {
                     .frame(width: hatSize, height: hatSize)
                     .position(self.hatPosition)
                     .onReceive(self.timer) { _ in
-                        self.hatMove()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                            self.hatMove()                        }
+    
                     }
                 
-                Image("StarObj")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: starSize, height: starSize)
-                    .position(self.starPosition)
-                    .onReceive(self.timer) { _ in
-                        self.starMove()
+                ForEach(1..<5){ i in
+                    Image("StarObj")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: starSize, height: starSize)
+                        .position(x:self.starPosition.x + CGFloat(5*i), y: self.starPosition.y + CGFloat(50*i) )
+                        .onReceive(self.timer) { _ in
+                            let time1: UInt64 = UInt64(i)
+                            let time = DispatchTime(uptimeNanoseconds: time1)
+                            DispatchQueue.main.asyncAfter(deadline: time){
+                                self.starMove()
+                            }
                     }
+                }
+                
+
                 
                 Image("FishboneObj")
                     .resizable()
@@ -141,15 +158,31 @@ struct BeachView: View {
                             self.screenWidth = geo.size.width
                             self.screenHeight = geo.size.height
                             
+                            
                         }
         }
         .edgesIgnoringSafeArea(.all)
+        .navigationBarBackButtonHidden()
     }
     
-//    func updateScreenSize(w, h){
-//        self.screenWidth = w
-//        self.screenHeight = h
-//    }
+    func calculatePoints(){
+        if (points <= 0){
+            points = 304.0
+        }
+    }
+    
+    
+    func checkCollision(objType: Int){
+        if(objType == 0){
+            
+        } else if(objType == 1) {
+            
+        } else if(objType == 2) {
+            
+        } else {
+            
+        }
+    }
     
     func crossMove() {
         if (self.screenHeight - 130) > self.hatPosition.y{
@@ -159,11 +192,13 @@ struct BeachView: View {
                 self.crossSize += 0.85
             }
         } else {
+            self.points -= 10
             self.crossPosition.x = 200
             self.crossPosition.y = 300
             self.crossSize = 1
         }
     }
+    
     func hatMove() {
         if (self.screenHeight - 100) > self.hatPosition.y{
             withAnimation{
@@ -172,6 +207,7 @@ struct BeachView: View {
                 self.hatSize += 0.8
             }
         } else {
+            self.points -= 10
             self.hatPosition.x = 200
             self.hatPosition.y = 300
             self.hatSize = 1
@@ -185,6 +221,7 @@ struct BeachView: View {
                 self.starSize += 0.8
             }
         } else {
+            self.points -= 10
             self.starPosition.x = 200
             self.starPosition.y = 300
             self.starSize = 1
@@ -198,6 +235,7 @@ struct BeachView: View {
                 self.fishboneSize += 0.85
             }
         } else {
+            self.points -= 10
             self.fishbonePosition.x = 200
             self.fishbonePosition.y = 300
             self.fishboneSize = 1
