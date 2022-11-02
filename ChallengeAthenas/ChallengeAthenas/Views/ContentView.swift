@@ -12,8 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-//            MenuView(level: $level)
-            CounterView()
+            MenuView(level: $level)
+//            CounterView()
         }
     }
 }
