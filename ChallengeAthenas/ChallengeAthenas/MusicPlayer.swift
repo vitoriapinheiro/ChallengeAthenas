@@ -20,28 +20,28 @@ class MusicPlayer: ObservableObject {
     
     
     func startBackgroundMusic(backgroundMusicFileName: String) {
-        if let bundle = Bundle.main.path(forResource: backgroundMusicFileName, ofType: "m4a") {
-            let backgroundMusic = NSURL(fileURLWithPath: bundle)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)
-                guard let audioPlayer = audioPlayer else {
+            if let bundle = Bundle.main.path(forResource: backgroundMusicFileName, ofType: "m4a") {
+                let backgroundMusic = NSURL(fileURLWithPath: bundle)
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)
+                    guard let audioPlayer = audioPlayer else {
+                        errorOccurred = true
+                        ErrorView(error: $errorOccurred)
+                        return
+                    }
+                    audioPlayer.numberOfLoops = -1
+                    audioPlayer.prepareToPlay()
+                    audioPlayer.play()
+                    songPlaying = backgroundMusicFileName
+                    playing = true
+                } catch {
                     errorOccurred = true
                     ErrorView(error: $errorOccurred)
-                    return
+                    print(error)
+                    playing = false
                 }
-                audioPlayer.numberOfLoops = -1
-                audioPlayer.prepareToPlay()
-                audioPlayer.play()
-                songPlaying = backgroundMusicFileName
-                playing = true
-            } catch {
-                errorOccurred = true
-                ErrorView(error: $errorOccurred)
-                print(error)
-                playing = false
             }
         }
-    }
     
     func playPause() {
         if playing {

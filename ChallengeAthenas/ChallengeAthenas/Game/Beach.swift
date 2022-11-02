@@ -12,6 +12,8 @@ struct BeachView: View {
     let level: Int = 0
     let bkgImg: [String] = ["Praia"]
     
+    @State var startSong = true
+    
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var pauseIsActive = false
     
@@ -148,21 +150,34 @@ struct BeachView: View {
                     .padding(.top, 60)
                 
                 if pauseIsActive {
-                    PauseMenuSheet(sheetIsActive: $pauseIsActive)
+                    PauseMenuSheet(
+                        sheetIsActive: $pauseIsActive,
+                        level: ContentView().$level,
+                        dialoguePosition: DialogueView(level: ContentView().$level).dialoguePosition,
+                        levelNumber: DialogueView(level: ContentView().$level).levelNumber
+                    )
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
                         .onReceive(self.timer){ _ in
-//                            self.collisionDetection()
-//                            updateScreenSize(w: geo.size.width, h: geo.size.height)
                             self.screenWidth = geo.size.width
                             self.screenHeight = geo.size.height
-                            
-                            
+                            musicControl()
                         }
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden()
+    }
+    
+    func musicControl(){
+        if (self.startSong){
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "O Demônio dos Mares")
+            self.startSong = false
+        } else if (pauseIsActive){
+            MusicPlayer.shared.audioPlayer.pause()
+        } else {
+            MusicPlayer.shared.audioPlayer.play()
+        }
     }
     
     func calculatePoints(){
