@@ -201,6 +201,26 @@ struct BeachView: View {
                         levelNumber: DialogueView(level: ContentView().$level).levelNumber
                     )
                 }
+                if lostGame {
+                    LargeSheet(
+                        showPopUp: $lostGame,
+                        imageName: "cranio-laranja",
+                        title: "Perdesse,\nBoy!",
+                        details: "O bichão te venceu na tora! Vai deixar, é?",
+                        primaryLabel: "TENTAR DE NOVO",
+                        primaryAction: {
+                            timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+                            lostGame = false
+                            startGame = true
+                            points = 304.0
+                        },
+                        secondaryLabel: "VOLTAR AO MAPA",
+                        secondaryAction: {
+                            print("Eita")
+                        }
+                    )
+                }
+                
             }
             .frame(width: geo.size.width, height: geo.size.height)
                         .onReceive(self.timer){ _ in
@@ -215,7 +235,7 @@ struct BeachView: View {
     }
     
     func gameControl(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+//        DispatchQueue.main.asyncAfter(deadline: .now()){
             if (self.startGame){
                 MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "O Demônio dos Mares")
                 self.startGame = false
@@ -227,18 +247,24 @@ struct BeachView: View {
                 self.timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
             }
             calculatePoints()
-        }
+//        }
     }
     
     func calculatePoints(){
         if (points <= 0){
             lostGame = true
+            self.timer.upstream.connect().cancel()
+            pauseIsActive = true
+            print("Perdeu, boy")
         }
     }
     
     
     func checkCollision(objType: Int){
         if(objType == 0){
+//            if (self.crossPosition.y < UIScreen.screenHeight/3.1 + ){
+//                points += 10
+//            }
             
         } else if(objType == 1) {
             
@@ -257,7 +283,7 @@ struct BeachView: View {
                 self.crossSize += 1.1*3
             }
         } else {
-//            HapticManager.instance.impact(style: .soft)
+            HapticManager.instance.impact(style: .soft)
             self.points -= 10
             self.crossPosition.x = UIScreen.screenWidth/2
             self.crossPosition.y = UIScreen.screenHeight/3.1
@@ -274,7 +300,7 @@ struct BeachView: View {
                 self.hatSize += 1*2.7
             }
         } else {
-//            HapticManager.instance.impact(style: .light)
+            HapticManager.instance.impact(style: .light)
             self.points -= 10
             self.hatPosition.x = UIScreen.screenWidth/2
             self.hatPosition.y = UIScreen.screenHeight/3
@@ -290,7 +316,7 @@ struct BeachView: View {
                 self.starSize += 1*2
             }
         } else {
-//            HapticManager.instance.impact(style: .light)
+            HapticManager.instance.impact(style: .light)
             self.points -= 10
             self.starPosition.x = UIScreen.screenWidth/2
             self.starPosition.y = UIScreen.screenHeight/3
@@ -306,7 +332,7 @@ struct BeachView: View {
                 self.fishboneSize += 1*2.2
             }
         } else {
-//            HapticManager.instance.impact(style: .soft)
+            HapticManager.instance.impact(style: .soft)
             self.points -= 10
             self.fishbonePosition.x = UIScreen.screenWidth/2
             self.fishbonePosition.y = UIScreen.screenHeight/3.1

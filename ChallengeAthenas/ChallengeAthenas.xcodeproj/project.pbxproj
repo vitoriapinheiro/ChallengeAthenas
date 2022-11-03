@@ -13,6 +13,7 @@
 		441BE7B92913067900409FF9 /* O Demônio dos Mares.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */; };
 		445819ED290C21C000E30737 /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445819EC290C21C000E30737 /* Collision.swift */; };
 		445FECEF29133993005D2907 /* Mangrove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445FECEE29133993005D2907 /* Mangrove.swift */; };
+		445FECF1291350B3005D2907 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445FECF0291350B3005D2907 /* Haptics.swift */; };
 		449F39F5290FF6D700FC8A6B /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F39F4290FF6D700FC8A6B /* Helicopter.swift */; };
 		449F39F8290FF7FC00FC8A6B /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F39F7290FF7FC00FC8A6B /* Pixel.swift */; };
 		449F39FA290FF9BE00FC8A6B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F39F9290FF9BE00FC8A6B /* Vehicle.swift */; };
@@ -61,6 +62,7 @@
 		441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "O Demônio dos Mares.m4a"; path = "../O Demônio dos Mares.m4a"; sourceTree = "<group>"; };
 		445819EC290C21C000E30737 /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
 		445FECEE29133993005D2907 /* Mangrove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mangrove.swift; sourceTree = "<group>"; };
+		445FECF0291350B3005D2907 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		449F39F4290FF6D700FC8A6B /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		449F39F7290FF7FC00FC8A6B /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 		449F39F9290FF9BE00FC8A6B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				449F39F7290FF7FC00FC8A6B /* Pixel.swift */,
 				449F39F9290FF9BE00FC8A6B /* Vehicle.swift */,
 				449F39FB290FFE7200FC8A6B /* Obstacle.swift */,
+				445FECF0291350B3005D2907 /* Haptics.swift */,
 			);
 			name = GameComponents;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				441BE7B52912F99C00409FF9 /* SmallSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				449F39FC290FFE7200FC8A6B /* Obstacle.swift in Sources */,
+				445FECF1291350B3005D2907 /* Haptics.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
 				445FECEF29133993005D2907 /* Mangrove.swift in Sources */,
 				D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */,

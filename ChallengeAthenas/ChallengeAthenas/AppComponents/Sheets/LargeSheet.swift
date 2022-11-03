@@ -16,7 +16,9 @@ struct LargeSheet: View {
     var title: String
     var details: String
     var primaryLabel: String
+    var primaryAction: () -> Void
     var secondaryLabel: String
+    var secondaryAction: () -> Void
     
     var body: some View {
         ZStack {
@@ -37,8 +39,8 @@ struct LargeSheet: View {
                     .frame(width: 214, alignment: .center)
                     .padding()
 
-                AppButton(title: "\(primaryLabel)", action: {}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20)
-                AppButton(title: "\(secondaryLabel)", action: {}, enable: false, isFill: true, height: 55, width: 267, big: true, size: 20)
+                AppButton(title: "\(primaryLabel)", action: {primaryAction()}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20)
+                AppButton(title: "\(secondaryLabel)", action: {secondaryAction()}, enable: false, isFill: true, height: 55, width: 267, big: true, size: 20)
             }
             
         }
