@@ -25,19 +25,19 @@ struct DialogueView: View {
     @StateObject var dialoguePosition = DialoguePosition()
     
     var body: some View {
-        let actualLevel = levelArray.levels[levelNumber.level]
+        let actualLevel = levelArray.levels[level]
         ZStack {
             Color.black.ignoresSafeArea()
             
             
             ZStack{
-                if dialoguePosition.position == 1 && levelNumber.level == 0{
+                if dialoguePosition.position == 1 && level == 0{
                     Image("bgEmpty1")
                         .resizable()
                         .ignoresSafeArea()
                 }
                 
-                else if dialoguePosition.position == 2 && levelNumber.level == 0{
+                else if dialoguePosition.position == 2 && level == 0{
                     Image("bgEmpty2")
                         .resizable()
                         .ignoresSafeArea()
@@ -56,7 +56,7 @@ struct DialogueView: View {
                 
                 //Personagem
                 //Mofia
-                if dialoguePosition.position > 2  && levelNumber.level == 0 {
+                if dialoguePosition.position > 2  && level == 0 {
                     VStack {
                         Spacer()
                         actualLevel.bossImage
@@ -67,7 +67,7 @@ struct DialogueView: View {
                 }
                 
                 //Cebrutius
-                if dialoguePosition.position > 0  && levelNumber.level == 1 {
+                if dialoguePosition.position > 0  && level == 1 {
                     VStack {
                         Spacer()
                         actualLevel.bossImage
@@ -79,12 +79,12 @@ struct DialogueView: View {
                 }
                 
                 // Tela preta de mofia
-                if dialoguePosition.position >= 15 && levelNumber.level == 0 {
+                if dialoguePosition.position >= 15 && level == 0 {
                     Color(.black).ignoresSafeArea()
                 }
                 
                 //Chico
-                if levelNumber.level == 2 {
+                if level == 2 {
                     VStack {
                         Spacer()
                         actualLevel.bossImage

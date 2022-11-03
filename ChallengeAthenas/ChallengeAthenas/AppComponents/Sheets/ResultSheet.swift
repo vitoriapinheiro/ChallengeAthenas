@@ -41,9 +41,11 @@ struct ResultSheet: View {
                     .frame(width: 214, alignment: .center)
                     .padding()
                 
-                AppButton(title: "PRÓXIMO NÍVEL", action: {}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20)
+                //AppButton(title: "PRÓXIMO NÍVEL", action: {level = 1}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20)
+                AppNavigationButton(title: "PRÓXIMO NÍVEL", nextView: {AnyView(MangrooveView(level: ContentView().$level))}, isEnable: true, isFill: true, height: 55, width: 267)
                 AppButton(title: "REPETIR", action: {}, enable: false, isFill: true, height: 55, width: 267, big: true, size: 20)
-                AppButton(title: "VOLTAR AO MAPA", action: {}, enable: true, isFill: false, height: 55, width: 267, big: true, size: 20)
+                //AppButton(title: "VOLTAR AO MAPA", action: {}, enable: true, isFill: false, height: 55, width: 267, big: true, size: 20)
+                AppNavigationButton(title: "VOLTAR AO MAPA", nextView: {AnyView(MapView(level: ContentView().$level))}, isEnable: true, isFill: false, height: 55, width: 267)
             }
             
         }

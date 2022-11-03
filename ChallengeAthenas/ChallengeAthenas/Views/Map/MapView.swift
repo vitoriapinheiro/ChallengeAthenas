@@ -36,7 +36,7 @@ struct MapView: View {
                 }
                 Spacer()
             }
-            NavigationLink(destination: BeachView()) {
+            NavigationLink(destination: BeachView(level: $level)) {
                 Text("1")
                     .font(.custom("xilosa", size: 32))
                     .frame(width:44, height:44)

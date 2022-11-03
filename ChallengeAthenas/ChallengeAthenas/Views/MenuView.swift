@@ -15,8 +15,7 @@ struct MenuView: View {
     let credits: Bool = false
     
     let bkgImg: [String] = [
-        "marcoMenu",
-        "hell"
+        "marcoMenu"
     ]
     
     var body: some View {
@@ -28,7 +27,7 @@ struct MenuView: View {
                 .background(.black)
             
             
-            Image(bkgImg[level])
+            Image(bkgImg[0])
                 .resizable()
                 .ignoresSafeArea(.all)
                 .aspectRatio(contentMode: .fill)
