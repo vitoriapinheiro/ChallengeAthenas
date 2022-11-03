@@ -12,7 +12,7 @@ struct BeachView: View {
     let level: Int = 0
     let bkgImg: [String] = ["Praia"]
     
-    @State var startSong = true
+    @State var startGame = true
     
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var pauseIsActive = false
@@ -154,6 +154,8 @@ struct BeachView: View {
                         self.fishboneMove()
                     }
                 
+                CounterView()
+                
                 PauseButtonView(sheetIsActive: $pauseIsActive)
                     .padding(.top, 60)
                 
@@ -170,21 +172,25 @@ struct BeachView: View {
                         .onReceive(self.timer){ _ in
                             self.screenWidth = geo.size.width
                             self.screenHeight = geo.size.height
-                            musicControl()
+                            gameControl()
                         }
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden()
     }
     
-    func musicControl(){
-        if (self.startSong){
-            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "O Demônio dos Mares")
-            self.startSong = false
-        } else if (pauseIsActive){
-            MusicPlayer.shared.audioPlayer.pause()
-        } else {
-            MusicPlayer.shared.audioPlayer.play()
+    func gameControl(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            if (self.startGame){
+                MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "O Demônio dos Mares")
+                self.startGame = false
+            } else if (pauseIsActive){
+                MusicPlayer.shared.audioPlayer.pause()
+                self.timer.upstream.connect().cancel()
+            } else {
+                MusicPlayer.shared.audioPlayer.play()
+                self.timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+            }
         }
     }
     
@@ -215,7 +221,7 @@ struct BeachView: View {
                 self.crossSize += 1.1
             }
         } else {
-            HapticManager.instance.impact(style: .soft)
+//            HapticManager.instance.impact(style: .soft)
             self.points -= 10
             self.crossPosition.x = UIScreen.screenWidth/2
             self.crossPosition.y = UIScreen.screenHeight/3.1
@@ -231,7 +237,7 @@ struct BeachView: View {
                 self.hatSize += 1
             }
         } else {
-            HapticManager.instance.impact(style: .light)
+//            HapticManager.instance.impact(style: .light)
             self.points -= 10
             self.hatPosition.x = UIScreen.screenWidth/2
             self.hatPosition.y = UIScreen.screenHeight/3
@@ -246,7 +252,7 @@ struct BeachView: View {
                 self.starSize += 1
             }
         } else {
-            HapticManager.instance.impact(style: .light)
+//            HapticManager.instance.impact(style: .light)
             self.points -= 10
             self.starPosition.x = UIScreen.screenWidth/2
             self.starPosition.y = UIScreen.screenHeight/3
@@ -261,7 +267,7 @@ struct BeachView: View {
                 self.fishboneSize += 1
             }
         } else {
-            HapticManager.instance.impact(style: .soft)
+//            HapticManager.instance.impact(style: .soft)
             self.points -= 10
             self.fishbonePosition.x = UIScreen.screenWidth/2
             self.fishbonePosition.y = UIScreen.screenHeight/3.1
