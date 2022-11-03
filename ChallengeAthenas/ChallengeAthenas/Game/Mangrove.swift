@@ -1,19 +1,18 @@
 //
-//  Beach.swift
+//  Mangrove.swift
 //  ChallengeAthenas
 //
-//  Created by vivi on 31/10/22.
+//  Created by vivi on 02/11/22.
 //
 
 import Foundation
 import SwiftUI
 
-struct BeachView: View {
+struct MangroveView: View{
     let level: Int = 0
-    let bkgImg: [String] = ["Praia"]
+    let bkgImg: [String] = ["Mangue"]
     
     @State var startGame = true
-    @State var lostGame = false
     
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var pauseIsActive = false
@@ -35,13 +34,8 @@ struct BeachView: View {
     @State var fishbonePosition = CGPoint(x: UIScreen.screenWidth/2, y: UIScreen.screenHeight/3.1)
     @State var fishboneSize = CGFloat(1)
     
-    @State var crossfirst = true
-    @State var hatfirst = true
-    @State var starfirst = true
-    @State var fishfirst = true
-    
     let teste: Image = {
-        return Image("CebruthiusFace")
+        return Image("mangueFace")
     }()
     
     var body: some View {
@@ -51,7 +45,6 @@ struct BeachView: View {
                     .resizable()
                     .ignoresSafeArea(.all)
                     .aspectRatio(contentMode: .fill)
-                
                 VStack{
                     Text("3:00")
                         .font(.custom("xilosa", size: (40)))
@@ -113,15 +106,7 @@ struct BeachView: View {
                     .frame(width: crossSize, height: crossSize)
                     .position(self.crossPosition)
                     .onReceive(self.timer) { _ in
-                        if crossfirst {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
-                                self.crossMove()
-                                self.crossfirst = false
-                            }
-
-                        }else{
-                            self.crossMove()
-                        }
+                        self.crossMove()
                     }
                 
                 Image("HatObj")
@@ -130,15 +115,9 @@ struct BeachView: View {
                     .frame(width: hatSize, height: hatSize)
                     .position(self.hatPosition)
                     .onReceive(self.timer) { _ in
-                        if hatfirst {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
-                                self.hatMove()
-                                self.hatfirst = false
-                            }
-                            
-                        }else{
-                            self.hatMove()
-                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...5)){
+                            self.hatMove()                        }
+    
                     }
                 
 //                ForEach(1..<5){ i in
@@ -162,15 +141,8 @@ struct BeachView: View {
                     .frame(width: starSize, height: starSize)
                     .position(self.starPosition)
                     .onReceive(self.timer) { _ in
-                        if starfirst {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
-                                self.starMove()
-                                self.starfirst = false
-                            }
-                            
-                        }else{
-                            self.starMove()
-                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...5)){
+                            self.starMove() }
                     }
                 
                 Image("FishboneObj")
@@ -179,16 +151,10 @@ struct BeachView: View {
                     .frame(width: fishboneSize, height: fishboneSize)
                     .position(self.fishbonePosition)
                     .onReceive(self.timer) { _ in
-                        if fishfirst {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
-                                self.fishboneMove()
-                                self.fishfirst = false
-                            }
-                            
-                        }else{
-                            self.fishboneMove()
-                        }
+                        self.fishboneMove()
                     }
+                
+                CounterView()
                 
                 PauseButtonView(sheetIsActive: $pauseIsActive)
                     .padding(.top, 60)
@@ -211,13 +177,12 @@ struct BeachView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden()
-//        .navigate(to: MangroveView(), when: $lostGame)
     }
     
     func gameControl(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 3){
             if (self.startGame){
-                MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "O Demônio dos Mares")
+                MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Ataque do Carangueijo")
                 self.startGame = false
             } else if (pauseIsActive){
                 MusicPlayer.shared.audioPlayer.pause()
@@ -226,13 +191,12 @@ struct BeachView: View {
                 MusicPlayer.shared.audioPlayer.play()
                 self.timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
             }
-            calculatePoints()
         }
     }
     
     func calculatePoints(){
         if (points <= 0){
-            lostGame = true
+            points = 304.0
         }
     }
     
@@ -252,9 +216,9 @@ struct BeachView: View {
     func crossMove() {
         if (UIScreen.screenHeight/1.3) > self.crossPosition.y{
             withAnimation{
-                self.crossPosition.x -= 1.8*3
-                self.crossPosition.y += 4.5*3
-                self.crossSize += 1.1*3
+                self.crossPosition.x -= 1.8
+                self.crossPosition.y += 4.5
+                self.crossSize += 1.1
             }
         } else {
 //            HapticManager.instance.impact(style: .soft)
@@ -262,16 +226,15 @@ struct BeachView: View {
             self.crossPosition.x = UIScreen.screenWidth/2
             self.crossPosition.y = UIScreen.screenHeight/3.1
             self.crossSize = 1
-            self.crossfirst = true
         }
     }
     
     func hatMove() {
         if (UIScreen.screenHeight/1.225) > self.hatPosition.y{
             withAnimation{
-                self.hatPosition.x -= 0.65*2.7
-                self.hatPosition.y += 5*2.7
-                self.hatSize += 1*2.7
+                self.hatPosition.x -= 0.65
+                self.hatPosition.y += 5
+                self.hatSize += 1
             }
         } else {
 //            HapticManager.instance.impact(style: .light)
@@ -279,15 +242,14 @@ struct BeachView: View {
             self.hatPosition.x = UIScreen.screenWidth/2
             self.hatPosition.y = UIScreen.screenHeight/3
             self.hatSize = 1
-            self.hatfirst = true
         }
     }
     func starMove() {
         if (UIScreen.screenHeight/1.225) > self.starPosition.y{
             withAnimation{
-                self.starPosition.x += 0.65*2
-                self.starPosition.y += 5*2
-                self.starSize += 1*2
+                self.starPosition.x += 0.65
+                self.starPosition.y += 5
+                self.starSize += 1
             }
         } else {
 //            HapticManager.instance.impact(style: .light)
@@ -295,15 +257,14 @@ struct BeachView: View {
             self.starPosition.x = UIScreen.screenWidth/2
             self.starPosition.y = UIScreen.screenHeight/3
             self.starSize = 1
-            self.starfirst = true
         }
     }
     func fishboneMove() {
         if (UIScreen.screenHeight/1.3) > self.fishbonePosition.y{
             withAnimation{
-                self.fishbonePosition.x += 1.8*2.2
-                self.fishbonePosition.y += 4.5*2.2
-                self.fishboneSize += 1*2.2
+                self.fishbonePosition.x += 1.8
+                self.fishbonePosition.y += 4.5
+                self.fishboneSize += 1
             }
         } else {
 //            HapticManager.instance.impact(style: .soft)
@@ -311,13 +272,6 @@ struct BeachView: View {
             self.fishbonePosition.x = UIScreen.screenWidth/2
             self.fishbonePosition.y = UIScreen.screenHeight/3.1
             self.fishboneSize = 1
-            self.fishfirst = true
         }
     }
-}
-
-extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.size.width
-   static let screenHeight = UIScreen.main.bounds.size.height
-   static let screenSize = UIScreen.main.bounds.size
 }

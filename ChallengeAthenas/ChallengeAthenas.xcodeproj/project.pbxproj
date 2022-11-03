@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441BE7B42912F99C00409FF9 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441BE7B22912F99C00409FF9 /* MediumSheet.swift */; };
+		441BE7B52912F99C00409FF9 /* SmallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441BE7B32912F99C00409FF9 /* SmallSheet.swift */; };
+		441BE7B82913067400409FF9 /* Ataque do Carangueijo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 441BE7B62912F9AF00409FF9 /* Ataque do Carangueijo.m4a */; };
+		441BE7B92913067900409FF9 /* O Demônio dos Mares.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */; };
 		445819ED290C21C000E30737 /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445819EC290C21C000E30737 /* Collision.swift */; };
+		445FECEF29133993005D2907 /* Mangrove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445FECEE29133993005D2907 /* Mangrove.swift */; };
 		449F39F5290FF6D700FC8A6B /* Helicopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F39F4290FF6D700FC8A6B /* Helicopter.swift */; };
 		449F39F8290FF7FC00FC8A6B /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F39F7290FF7FC00FC8A6B /* Pixel.swift */; };
 		449F39FA290FF9BE00FC8A6B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F39F9290FF9BE00FC8A6B /* Vehicle.swift */; };
@@ -28,8 +33,6 @@
 		A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAE9290B1521004BCAFB /* Team.swift */; };
 		A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */; };
 		A3D0AAEE290B255F004BCAFB /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0AAED290B255F004BCAFB /* CreditsView.swift */; };
-		CA4D087D2912E9E600F086B9 /* SmallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D087C2912E9E600F086B9 /* SmallSheet.swift */; };
-		CA4D087F2912E9EE00F086B9 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4D087E2912E9EE00F086B9 /* MediumSheet.swift */; };
 		CA4EDDE529070A9700E3AEC3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE429070A9700E3AEC3 /* Level.swift */; };
 		CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */; };
 		CA4EDDEA2907263900E3AEC3 /* NextDialogueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */; };
@@ -37,8 +40,6 @@
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
-		D42F1F9929116A4F0048914B /* Ataque do Carangueijo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D42F1F9729116A4E0048914B /* Ataque do Carangueijo.m4a */; };
-		D42F1F9A29116A4F0048914B /* O Demônio dos Mares.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D42F1F9829116A4F0048914B /* O Demônio dos Mares.m4a */; };
 		D42F1F9C29116A6E0048914B /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1F9B29116A6E0048914B /* MusicPlayer.swift */; };
 		D42F1FA22911B70B0048914B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1FA12911B70B0048914B /* CounterView.swift */; };
 		D42F1FA62911C3130048914B /* LargeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1FA52911C3130048914B /* LargeSheet.swift */; };
@@ -54,7 +55,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441BE7B22912F99C00409FF9 /* MediumSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediumSheet.swift; path = ../../../../../../../../Downloads/MediumSheet.swift; sourceTree = "<group>"; };
+		441BE7B32912F99C00409FF9 /* SmallSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmallSheet.swift; path = ../../../../../../../../Downloads/SmallSheet.swift; sourceTree = "<group>"; };
+		441BE7B62912F9AF00409FF9 /* Ataque do Carangueijo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ataque do Carangueijo.m4a"; path = "../Ataque do Carangueijo.m4a"; sourceTree = "<group>"; };
+		441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "O Demônio dos Mares.m4a"; path = "../O Demônio dos Mares.m4a"; sourceTree = "<group>"; };
 		445819EC290C21C000E30737 /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
+		445FECEE29133993005D2907 /* Mangrove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mangrove.swift; sourceTree = "<group>"; };
 		449F39F4290FF6D700FC8A6B /* Helicopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helicopter.swift; sourceTree = "<group>"; };
 		449F39F7290FF7FC00FC8A6B /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 		449F39F9290FF9BE00FC8A6B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -76,8 +82,6 @@
 		A3D0AAE9290B1521004BCAFB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		A3D0AAEB290B16A8004BCAFB /* TeamArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamArray.swift; sourceTree = "<group>"; };
 		A3D0AAED290B255F004BCAFB /* CreditsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
-		CA4D087C2912E9E600F086B9 /* SmallSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmallSheet.swift; path = ../../../../../../../../../Downloads/SmallSheet.swift; sourceTree = "<group>"; };
-		CA4D087E2912E9EE00F086B9 /* MediumSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediumSheet.swift; path = ../../../../../../../../../Downloads/MediumSheet.swift; sourceTree = "<group>"; };
 		CA4EDDE429070A9700E3AEC3 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		CA4EDDE629070D1800E3AEC3 /* LevelArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelArray.swift; sourceTree = "<group>"; };
 		CA4EDDE92907263900E3AEC3 /* NextDialogueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDialogueButton.swift; sourceTree = "<group>"; };
@@ -85,8 +89,6 @@
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
-		D42F1F9729116A4E0048914B /* Ataque do Carangueijo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ataque do Carangueijo.m4a"; sourceTree = "<group>"; };
-		D42F1F9829116A4F0048914B /* O Demônio dos Mares.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "O Demônio dos Mares.m4a"; sourceTree = "<group>"; };
 		D42F1F9B29116A6E0048914B /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		D42F1FA12911B70B0048914B /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		D42F1FA52911C3130048914B /* LargeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSheet.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				445819EC290C21C000E30737 /* Collision.swift */,
 				449F39F4290FF6D700FC8A6B /* Helicopter.swift */,
 				449F39FD2910305000FC8A6B /* Beach.swift */,
+				445FECEE29133993005D2907 /* Mangrove.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -203,8 +206,8 @@
 		44F976FA291180D1003C69B9 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				D42F1F9729116A4E0048914B /* Ataque do Carangueijo.m4a */,
-				D42F1F9829116A4F0048914B /* O Demônio dos Mares.m4a */,
+				441BE7B62912F9AF00409FF9 /* Ataque do Carangueijo.m4a */,
+				441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -246,8 +249,8 @@
 		D42F1FA32911C2D90048914B /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
-				CA4D087E2912E9EE00F086B9 /* MediumSheet.swift */,
-				CA4D087C2912E9E600F086B9 /* SmallSheet.swift */,
+				441BE7B22912F99C00409FF9 /* MediumSheet.swift */,
+				441BE7B32912F99C00409FF9 /* SmallSheet.swift */,
 				D42F1FA52911C3130048914B /* LargeSheet.swift */,
 				D42F1FA72911CA620048914B /* ResultSheet.swift */,
 			);
@@ -342,10 +345,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C365C628F98B30007B9868 /* Preview Assets.xcassets in Resources */,
-				D42F1F9929116A4F0048914B /* Ataque do Carangueijo.m4a in Resources */,
+				441BE7B82913067400409FF9 /* Ataque do Carangueijo.m4a in Resources */,
 				44C365C328F98B30007B9868 /* Assets.xcassets in Resources */,
 				E99A2E10290B0F3700175BF8 /* xilosa.ttf in Resources */,
-				D42F1F9A29116A4F0048914B /* O Demônio dos Mares.m4a in Resources */,
+				441BE7B92913067900409FF9 /* O Demônio dos Mares.m4a in Resources */,
 				E99A2E0E290B0F3400175BF8 /* cordel-rustika.otf in Resources */,
 				E99A2E0F290B0F3500175BF8 /* xilo-sans.ttf in Resources */,
 			);
@@ -374,6 +377,7 @@
 				D42F1FA82911CA620048914B /* ResultSheet.swift in Sources */,
 				A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
+				441BE7B42912F99C00409FF9 /* MediumSheet.swift in Sources */,
 				A33BBE81291060AF00F6D092 /* CreditsGridLabel.swift in Sources */,
 				D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */,
 				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
@@ -387,12 +391,12 @@
 				D42F1FA22911B70B0048914B /* CounterView.swift in Sources */,
 				D42F1F9C29116A6E0048914B /* MusicPlayer.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
+				441BE7B52912F99C00409FF9 /* SmallSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				449F39FC290FFE7200FC8A6B /* Obstacle.swift in Sources */,
-				CA4D087F2912E9EE00F086B9 /* MediumSheet.swift in Sources */,
 				CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */,
+				445FECEF29133993005D2907 /* Mangrove.swift in Sources */,
 				D44064D6291056BC00E21F65 /* LifeBar.swift in Sources */,
-				CA4D087D2912E9E600F086B9 /* SmallSheet.swift in Sources */,
 				44C365D428FA41EF007B9868 /* SettingsView.swift in Sources */,
 				E99A2E12290B156900175BF8 /* AppInitalButton.swift in Sources */,
 			);

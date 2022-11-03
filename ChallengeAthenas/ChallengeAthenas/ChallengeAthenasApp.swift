@@ -11,7 +11,6 @@ import SwiftUI
 struct ChallengeAthenasApp: App {
     var body: some Scene {
         WindowGroup {
-            //HapticsView()
             ContentView()
         }
     }
