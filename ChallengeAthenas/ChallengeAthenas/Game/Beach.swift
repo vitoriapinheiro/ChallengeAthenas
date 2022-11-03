@@ -32,6 +32,11 @@ struct BeachView: View {
     @State var fishbonePosition = CGPoint(x: UIScreen.screenWidth/2, y: UIScreen.screenHeight/3.1)
     @State var fishboneSize = CGFloat(1)
     
+    @State var crossfirst = true
+    @State var hatfirst = true
+    @State var starfirst = true
+    @State var fishfirst = true
+    
     let teste: Image = {
         return Image("CebruthiusFace")
     }()
@@ -104,7 +109,15 @@ struct BeachView: View {
                     .frame(width: crossSize, height: crossSize)
                     .position(self.crossPosition)
                     .onReceive(self.timer) { _ in
-                        self.crossMove()
+                        if crossfirst {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
+                                self.crossMove()
+                                self.crossfirst = false
+                            }
+
+                        }else{
+                            self.crossMove()
+                        }
                     }
                 
                 Image("HatObj")
@@ -113,9 +126,15 @@ struct BeachView: View {
                     .frame(width: hatSize, height: hatSize)
                     .position(self.hatPosition)
                     .onReceive(self.timer) { _ in
-                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...5)){
-                            self.hatMove()                        }
-    
+                        if hatfirst {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
+                                self.hatMove()
+                                self.hatfirst = false
+                            }
+                            
+                        }else{
+                            self.hatMove()
+                        }
                     }
                 
 //                ForEach(1..<5){ i in
@@ -139,8 +158,15 @@ struct BeachView: View {
                     .frame(width: starSize, height: starSize)
                     .position(self.starPosition)
                     .onReceive(self.timer) { _ in
-                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...5)){
-                            self.starMove() }
+                        if starfirst {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
+                                self.starMove()
+                                self.starfirst = false
+                            }
+                            
+                        }else{
+                            self.starMove()
+                        }
                     }
                 
                 Image("FishboneObj")
@@ -149,7 +175,15 @@ struct BeachView: View {
                     .frame(width: fishboneSize, height: fishboneSize)
                     .position(self.fishbonePosition)
                     .onReceive(self.timer) { _ in
-                        self.fishboneMove()
+                        if fishfirst {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...8)){
+                                self.fishboneMove()
+                                self.fishfirst = false
+                            }
+                            
+                        }else{
+                            self.fishboneMove()
+                        }
                     }
                 
                 PauseButtonView(sheetIsActive: $pauseIsActive)
@@ -195,58 +229,62 @@ struct BeachView: View {
     func crossMove() {
         if (UIScreen.screenHeight/1.3) > self.crossPosition.y{
             withAnimation{
-                self.crossPosition.x -= 1.8
-                self.crossPosition.y += 4.5
-                self.crossSize += 1.1
+                self.crossPosition.x -= 1.8*3
+                self.crossPosition.y += 4.5*3
+                self.crossSize += 1.1*3
             }
         } else {
             self.points -= 10
             self.crossPosition.x = UIScreen.screenWidth/2
             self.crossPosition.y = UIScreen.screenHeight/3.1
             self.crossSize = 1
+            self.crossfirst = true
         }
     }
     
     func hatMove() {
         if (UIScreen.screenHeight/1.225) > self.hatPosition.y{
             withAnimation{
-                self.hatPosition.x -= 0.65
-                self.hatPosition.y += 5
-                self.hatSize += 1
+                self.hatPosition.x -= 0.65*2.7
+                self.hatPosition.y += 5*2.7
+                self.hatSize += 1*2.7
             }
         } else {
             self.points -= 10
             self.hatPosition.x = UIScreen.screenWidth/2
             self.hatPosition.y = UIScreen.screenHeight/3
             self.hatSize = 1
+            self.hatfirst = true
         }
     }
     func starMove() {
         if (UIScreen.screenHeight/1.225) > self.starPosition.y{
             withAnimation{
-                self.starPosition.x += 0.65
-                self.starPosition.y += 5
-                self.starSize += 1
+                self.starPosition.x += 0.65*2
+                self.starPosition.y += 5*2
+                self.starSize += 1*2
             }
         } else {
             self.points -= 10
             self.starPosition.x = UIScreen.screenWidth/2
             self.starPosition.y = UIScreen.screenHeight/3
             self.starSize = 1
+            self.starfirst = true
         }
     }
     func fishboneMove() {
         if (UIScreen.screenHeight/1.3) > self.fishbonePosition.y{
             withAnimation{
-                self.fishbonePosition.x += 1.8
-                self.fishbonePosition.y += 4.5
-                self.fishboneSize += 1
+                self.fishbonePosition.x += 1.8*2.2
+                self.fishbonePosition.y += 4.5*2.2
+                self.fishboneSize += 1*2.2
             }
         } else {
             self.points -= 10
             self.fishbonePosition.x = UIScreen.screenWidth/2
             self.fishbonePosition.y = UIScreen.screenHeight/3.1
             self.fishboneSize = 1
+            self.fishfirst = true
         }
     }
 }
