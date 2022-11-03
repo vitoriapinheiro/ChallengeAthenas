@@ -17,7 +17,8 @@ struct BeachView: View {
     @State var lostGame = false
     @State var wonGame = false
     
-    @State var timeMusic = 4
+    @State var velocidade = 1.00
+    @State var timeMusic = 68
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var timerMusic = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -56,7 +57,7 @@ struct BeachView: View {
     var body: some View {
         GeometryReader{ geo in
             ZStack{
-                Image(bkgImg[level])
+                Image("Praia")
                     .resizable()
                     .ignoresSafeArea(.all)
                     .aspectRatio(contentMode: .fill)
@@ -114,7 +115,9 @@ struct BeachView: View {
                                 wonGame = true
                                 level = 1
                                 self.timeMusic = 68
+                                self.velocidade = 1.00
                             }else {
+                                self.velocidade += 0.02
                                 self.timeMusic -= 1
                             }
                         }
@@ -276,9 +279,9 @@ struct BeachView: View {
     func crossMove() {
         if (UIScreen.screenHeight/1.3 + 15) > self.crossPosition.y{
             withAnimation{
-                self.crossPosition.x -= 1.8*3
-                self.crossPosition.y += 4.5*3
-                self.crossSize += 1.1*3
+                self.crossPosition.x -= 1.8*3*velocidade
+                self.crossPosition.y += 4.5*3*velocidade
+                self.crossSize += 1.1*3*velocidade
             }
         } else {
             if(!crossTapped){
@@ -297,9 +300,9 @@ struct BeachView: View {
     func hatMove() {
         if (UIScreen.screenHeight/1.225 + 15) > self.hatPosition.y{
             withAnimation{
-                self.hatPosition.x -= 0.65*2.7
-                self.hatPosition.y += 5*2.7
-                self.hatSize += 1*2.7
+                self.hatPosition.x -= 0.65*2.5*velocidade
+                self.hatPosition.y += 5*2.5*velocidade
+                self.hatSize += 1*2.5*velocidade
             }
         } else {
             if(!hatTapped){
@@ -317,9 +320,9 @@ struct BeachView: View {
     func starMove() {
         if (UIScreen.screenHeight/1.225 + 15) > self.starPosition.y{
             withAnimation{
-                self.starPosition.x += 0.65*2
-                self.starPosition.y += 5*2
-                self.starSize += 1*2
+                self.starPosition.x += 0.65*2*velocidade
+                self.starPosition.y += 5*2*velocidade
+                self.starSize += 1*2*velocidade
             }
         } else {
             if(!starTapped){
@@ -337,9 +340,9 @@ struct BeachView: View {
     func fishboneMove() {
         if (UIScreen.screenHeight/1.3 + 15) > self.fishbonePosition.y{
             withAnimation{
-                self.fishbonePosition.x += 1.8*2.2
-                self.fishbonePosition.y += 4.5*2.2
-                self.fishboneSize += 1*2.2
+                self.fishbonePosition.x += 1.8*2.2*velocidade
+                self.fishbonePosition.y += 4.5*2.2*velocidade
+                self.fishboneSize += 1*2.2*velocidade
             }
         } else {
             if(!fishboneTapped){
