@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		441BE7B42912F99C00409FF9 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441BE7B22912F99C00409FF9 /* MediumSheet.swift */; };
-		441BE7B52912F99C00409FF9 /* SmallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441BE7B32912F99C00409FF9 /* SmallSheet.swift */; };
 		441BE7B82913067400409FF9 /* Ataque do Carangueijo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 441BE7B62912F9AF00409FF9 /* Ataque do Carangueijo.m4a */; };
 		441BE7B92913067900409FF9 /* O Demônio dos Mares.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */; };
 		445819ED290C21C000E30737 /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445819EC290C21C000E30737 /* Collision.swift */; };
@@ -41,6 +39,8 @@
 		CAF72E7A290235370091513A /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E76290235370091513A /* DialogueView.swift */; };
 		CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E77290235370091513A /* PauseMenuSheet.swift */; };
 		CAF72E7C290235370091513A /* ConversationAndButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF72E78290235370091513A /* ConversationAndButtonsView.swift */; };
+		CAFCC76529140A1000237613 /* SmallSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCC76429140A1000237613 /* SmallSheet.swift */; };
+		CAFCC76729140A3700237613 /* MediumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCC76629140A3700237613 /* MediumSheet.swift */; };
 		D42F1F9C29116A6E0048914B /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1F9B29116A6E0048914B /* MusicPlayer.swift */; };
 		D42F1FA22911B70B0048914B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1FA12911B70B0048914B /* CounterView.swift */; };
 		D42F1FA62911C3130048914B /* LargeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F1FA52911C3130048914B /* LargeSheet.swift */; };
@@ -56,8 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		441BE7B22912F99C00409FF9 /* MediumSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediumSheet.swift; path = ../../../../../../../../Downloads/MediumSheet.swift; sourceTree = "<group>"; };
-		441BE7B32912F99C00409FF9 /* SmallSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmallSheet.swift; path = ../../../../../../../../Downloads/SmallSheet.swift; sourceTree = "<group>"; };
 		441BE7B62912F9AF00409FF9 /* Ataque do Carangueijo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ataque do Carangueijo.m4a"; path = "../Ataque do Carangueijo.m4a"; sourceTree = "<group>"; };
 		441BE7B72912F9AF00409FF9 /* O Demônio dos Mares.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "O Demônio dos Mares.m4a"; path = "../O Demônio dos Mares.m4a"; sourceTree = "<group>"; };
 		445819EC290C21C000E30737 /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
@@ -91,6 +89,8 @@
 		CAF72E76290235370091513A /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
 		CAF72E77290235370091513A /* PauseMenuSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseMenuSheet.swift; sourceTree = "<group>"; };
 		CAF72E78290235370091513A /* ConversationAndButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationAndButtonsView.swift; sourceTree = "<group>"; };
+		CAFCC76429140A1000237613 /* SmallSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSheet.swift; sourceTree = "<group>"; };
+		CAFCC76629140A3700237613 /* MediumSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumSheet.swift; sourceTree = "<group>"; };
 		D42F1F9B29116A6E0048914B /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		D42F1FA12911B70B0048914B /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		D42F1FA52911C3130048914B /* LargeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSheet.swift; sourceTree = "<group>"; };
@@ -252,10 +252,10 @@
 		D42F1FA32911C2D90048914B /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
-				441BE7B22912F99C00409FF9 /* MediumSheet.swift */,
-				441BE7B32912F99C00409FF9 /* SmallSheet.swift */,
 				D42F1FA52911C3130048914B /* LargeSheet.swift */,
+				CAFCC76629140A3700237613 /* MediumSheet.swift */,
 				D42F1FA72911CA620048914B /* ResultSheet.swift */,
+				CAFCC76429140A1000237613 /* SmallSheet.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -368,6 +368,7 @@
 				A33BBE83291062E600F6D092 /* CreditsBackgroundImage.swift in Sources */,
 				44C365DA28FA4950007B9868 /* MapView.swift in Sources */,
 				E97B0F7F290B1D3500E50277 /* CreditsButton.swift in Sources */,
+				CAFCC76729140A3700237613 /* MediumSheet.swift in Sources */,
 				A3D0AAEA290B1521004BCAFB /* Team.swift in Sources */,
 				CA4EDDE729070D1800E3AEC3 /* LevelArray.swift in Sources */,
 				D42F1FA62911C3130048914B /* LargeSheet.swift in Sources */,
@@ -379,8 +380,8 @@
 				CAF72E79290235370091513A /* PauseButtonView.swift in Sources */,
 				D42F1FA82911CA620048914B /* ResultSheet.swift in Sources */,
 				A3D0AAEC290B16A8004BCAFB /* TeamArray.swift in Sources */,
+				CAFCC76529140A1000237613 /* SmallSheet.swift in Sources */,
 				44C365BF28F98B2E007B9868 /* ChallengeAthenasApp.swift in Sources */,
-				441BE7B42912F99C00409FF9 /* MediumSheet.swift in Sources */,
 				A33BBE81291060AF00F6D092 /* CreditsGridLabel.swift in Sources */,
 				D4EAE31B29075FFB00243041 /* PopUpTitle.swift in Sources */,
 				44C365D628FA45A4007B9868 /* AppNavigationButton.swift in Sources */,
@@ -394,7 +395,6 @@
 				D42F1FA22911B70B0048914B /* CounterView.swift in Sources */,
 				D42F1F9C29116A6E0048914B /* MusicPlayer.swift in Sources */,
 				CAF72E7B290235370091513A /* PauseMenuSheet.swift in Sources */,
-				441BE7B52912F99C00409FF9 /* SmallSheet.swift in Sources */,
 				CAF72E7A290235370091513A /* DialogueView.swift in Sources */,
 				449F39FC290FFE7200FC8A6B /* Obstacle.swift in Sources */,
 				445FECF1291350B3005D2907 /* Haptics.swift in Sources */,

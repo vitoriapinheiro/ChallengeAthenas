@@ -9,14 +9,18 @@ import Foundation
 import SwiftUI
 
 struct BeachView: View {
-    let level: Int = 0
-    let bkgImg: [String] = ["Praia"]
+    @Binding var level: Int
+    
+    let bkgImg: [String] = ["Praia", "Mangue"]
     
     @State var startGame = true
     @State var lostGame = false
     @State var wonGame = false
     
+    @State var timeMusic = 4
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State var timerMusic = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     @State var pauseIsActive = false
     
     @State var points = 304.0
@@ -102,9 +106,18 @@ struct BeachView: View {
                     }
                 
                 VStack{
-                    Text("3:00")
+                    secondsToHoursMinutesSeconds(timeMusic)
                         .font(.custom("xilosa", size: (40)))
                         .foregroundColor(.white)
+                        .onReceive(self.timerMusic) { _ in
+                            if timeMusic <= 0 {
+                                wonGame = true
+                                level = 1
+                                self.timeMusic = 68
+                            }else {
+                                self.timeMusic -= 1
+                            }
+                        }
                     Spacer()
                     VStack(spacing: 0){
                         teste
@@ -166,7 +179,11 @@ struct BeachView: View {
                         levelNumber: DialogueView(level: ContentView().$level).levelNumber
                     )
                 }
-                if lostGame {
+                if wonGame {
+                    ResultSheet(showPopUp: $wonGame)
+                }
+                
+                else if lostGame {
                     LargeSheet(
                         showPopUp: $lostGame,
                         imageName: "cranio-laranja",
@@ -184,9 +201,8 @@ struct BeachView: View {
                             print("Eita")
                         }
                     )
-                } else if (wonGame) {
-                    ResultSheet(showPopUp: $wonGame)
                 }
+                
                 
                 
             }
@@ -202,12 +218,16 @@ struct BeachView: View {
 //        .navigate(to: MangroveView(), when: $lostGame)
     }
     
+    func secondsToHoursMinutesSeconds(_ seconds: Int) -> Text {
+        return Text("0\(seconds/60):\(seconds % 60)")
+    }
+    
     func gameControl(){
 //        DispatchQueue.main.asyncAfter(deadline: .now()){
             if (self.startGame){
                 MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "O Demônio dos Mares")
                 self.startGame = false
-            } else if (pauseIsActive){
+            } else if pauseIsActive || wonGame {
                 MusicPlayer.shared.audioPlayer.pause()
                 self.timer.upstream.connect().cancel()
             } else {
