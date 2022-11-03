@@ -17,7 +17,7 @@ struct BeachView: View {
     @State var lostGame = false
     @State var wonGame = false
     
-    @State var timeMusic = 4
+    @State var timeMusic = 68
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var timerMusic = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
