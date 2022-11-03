@@ -20,7 +20,9 @@ struct Lifebar: View {
                 .opacity(status > 116 ? 0.24 : 0.5)
             HStack {
                 VStack {
-                    Image(status > 116 ? "full-heart" : "weak-heart")
+                    withAnimation{
+                        Image(status > 116 ? "full-heart" : "weak-heart")
+                    }
                     Text("vida")
                         .foregroundColor(.white)
                         .font(.custom("xilo-sans", size: 20))

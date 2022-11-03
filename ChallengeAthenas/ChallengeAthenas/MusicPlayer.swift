@@ -29,7 +29,7 @@ class MusicPlayer: ObservableObject {
                         ErrorView(error: $errorOccurred)
                         return
                     }
-                    audioPlayer.numberOfLoops = -1
+                    audioPlayer.numberOfLoops = 0
                     audioPlayer.prepareToPlay()
                     audioPlayer.play()
                     songPlaying = backgroundMusicFileName

@@ -9,16 +9,16 @@ import Foundation
 import SwiftUI
 
 struct ResultSheet: View {
-//    @Binding var showPopUp: Bool
-    var starRating: Int
+    @Binding var showPopUp: Bool
+    var starRating: Int = 3
     let titles: [String] = ["Valeu,\nman!", "Forte\ndemais!", "É o bichão\nmemo!"]
     
     var body: some View {
         ZStack {
             Color.black.opacity(0.5)
                 .onTapGesture {
-//                                    showPopUp = false
-                                }
+                    showPopUp = false
+                }
                 .ignoresSafeArea()
             VStack {
                 PopUpTitle(text: titles[(starRating - 1)], colorPick: false)
@@ -40,7 +40,7 @@ struct ResultSheet: View {
                     .font(.custom("xilosa", size: 20))
                     .frame(width: 214, alignment: .center)
                     .padding()
-
+                
                 AppButton(title: "PRÓXIMO NÍVEL", action: {}, enable: true, isFill: true, height: 55, width: 267, big: true, size: 20)
                 AppButton(title: "REPETIR", action: {}, enable: false, isFill: true, height: 55, width: 267, big: true, size: 20)
                 AppButton(title: "VOLTAR AO MAPA", action: {}, enable: true, isFill: false, height: 55, width: 267, big: true, size: 20)
@@ -52,11 +52,5 @@ struct ResultSheet: View {
             Image("large-popup-bg")
                 .frame(width: 351, height: 575)
         )
-    }
-}
-
-struct Result_Sheet: PreviewProvider {
-    static var previews: some View {
-        ResultSheet(starRating: 2)
     }
 }
