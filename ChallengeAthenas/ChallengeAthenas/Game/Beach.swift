@@ -190,8 +190,6 @@ struct BeachView: View {
                         }
                     }
                 
-                CounterView()
-                
                 PauseButtonView(sheetIsActive: $pauseIsActive)
                     .padding(.top, 60)
                 
