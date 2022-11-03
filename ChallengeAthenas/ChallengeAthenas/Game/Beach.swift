@@ -13,6 +13,7 @@ struct BeachView: View {
     let bkgImg: [String] = ["Praia"]
     
     @State var startGame = true
+    @State var lostGame = false
     
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var pauseIsActive = false
@@ -48,7 +49,8 @@ struct BeachView: View {
                 
                 VStack{
                     Text("3:00")
-                        .bold()
+                        .font(.custom("xilosa", size: (40)))
+                        .foregroundColor(.white)
                     Spacer()
                     VStack(spacing: 0){
                         teste
@@ -177,6 +179,7 @@ struct BeachView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden()
+//        .navigate(to: MangroveView(), when: $lostGame)
     }
     
     func gameControl(){
@@ -191,12 +194,13 @@ struct BeachView: View {
                 MusicPlayer.shared.audioPlayer.play()
                 self.timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
             }
+            calculatePoints()
         }
     }
     
     func calculatePoints(){
         if (points <= 0){
-            points = 304.0
+            lostGame = true
         }
     }
     
