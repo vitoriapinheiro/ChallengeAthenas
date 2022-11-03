@@ -49,12 +49,14 @@ struct MapView: View {
                    {notYetLevel = false} : {notYetLevel = true}
             ) {
                 ZStack {
-                    Text("2")
-                        .font(.custom("xilosa", size: 32))
-                        .frame(width:44, height:44)
-                        .foregroundColor(level == 1 ? Color.white : Color.black)
-                        .background(Color.black)
-                        .clipShape(Circle())
+                    NavigationLink(destination: MangrooveView(level: $level)) {
+                        Text("2")
+                            .font(.custom("xilosa", size: 32))
+                            .frame(width:44, height:44)
+                            .foregroundColor(level == 1 ? Color.white : Color.black)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                    }
                     Image("lockIMG")
                         .opacity(level == 1 ? 0: 100)
                 }
